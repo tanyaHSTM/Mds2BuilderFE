@@ -1,0 +1,18 @@
+<ol class="nav pvdm-linear-flow-nav">
+
+  <li ng-repeat="step in $ctrl.steps">
+
+    <span class="pvdm-lfn--line"></span>
+
+    <span ng-class="{active: $index == $ctrl.currentStep}">
+
+      <span class="pvdm-lfn-step">{{$index+1}}</span>
+
+      <span class="pvdm-lfn-step-label" translate>{{::step.label}}</span>
+
+    </span>
+
+  </li>
+
+
+</ol>

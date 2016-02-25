@@ -1,0 +1,59 @@
+.pvdm-datepicker--header {
+  border-bottom: 1px solid #C7C7C7;
+  & .pvdm-datepicker--btn {
+    color: #365EBF !important;
+    &:hover {
+      color: darken(#365EBF, 15) !important;
+      }
+    }
+  }
+
+.pvdm-date-picker-popup-tpl {
+  background-color: #ececec;
+  outline: 0;
+  padding: 0 !important;
+  }
+
+.pvdm-day-picker-tpl {
+  background-color: transparent;
+  outline:0;
+  }
+
+.pvdm-month-picker-tpl,
+.pvdm-year-picker-tpl {
+  outline:0;
+  }
+
+.pvdm-datepicker--btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  background-color: transparent;
+  &.active {
+    background-color: #C7C7C7;
+    color: white !important;
+    outline: 0;
+    background-image: none;
+    }
+  &:hover {
+    color: #365EBF;
+    text-decoration: none;
+    }
+  &[disabled] {
+    cursor: false;
+    pointer-events: none;
+    opacity: .45;
+    background-color: #efefef
+    }
+  }
+

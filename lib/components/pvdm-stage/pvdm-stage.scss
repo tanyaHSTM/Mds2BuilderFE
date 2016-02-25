@@ -1,0 +1,36 @@
+@import './lib/stylesheets/pvdm-bootstrap/mixins';
+
+.pvdm-stage {
+  @include clearfix;
+  margin-top: 0;
+  margin-bottom: -8px;
+  }
+
+.pvdm-stage-content {
+  padding: 20px 30px 8px 30px;
+  background-color: #e7e7e7;
+  .pvdm-record-detail-stage & {
+    padding-top: 8px;
+    margin-top: 15px;
+    border-top: 1px solid #C7C7C7;
+    background-color: #f2faff;
+    }
+  }
+
+.pvdm-stage-toggle {
+  text-align: center;
+  line-height: 10px;
+  width: 30px;
+  height: 15px;
+  background-color: #e7e7e7;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: -15px;
+  border-width: 0 1px 1px 1px;
+  border-color: #AEAEAE;
+  border-style: solid;
+  .pvdm-record-detail-stage .active & {
+    background-color: #f2faff;
+    }
+  }

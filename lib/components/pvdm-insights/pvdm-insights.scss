@@ -1,0 +1,98 @@
+.pvdm-insights {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  }
+
+.pvdm-insight {
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  display: block;
+  &.active {
+    border-top:5px;
+    }
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  }
+
+.pvdm-insight + .pvdm-insight {
+  margin-left: 5px;
+  }
+
+.pvdm-insight-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  }
+
+.pvdm-insight-value {
+  font-size: 30px;
+  line-height: 30px;
+  }
+
+// Skins
+
+@mixin insight-variant($color) {
+  background: $color;
+  border-bottom: solid 5px $color;
+  &.active {
+    border-bottom: solid 5px darken($color, 10%);
+    }
+  }
+
+.insight--default {
+  @include insight-variant(#117EAA)
+  }
+
+.insight--info {
+  @include insight-variant(#68C6E8)
+  }
+
+.insight--warning {
+  @include insight-variant(#E77924)
+  }
+
+.insight--danger {
+  @include insight-variant(#E53D44)
+  }
+
+.insight--notice {
+  @include insight-variant(#117EAA)
+  }

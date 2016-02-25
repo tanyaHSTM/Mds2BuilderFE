@@ -1,0 +1,53 @@
+.panel-default > .panel-heading .btn-primary .badge {
+  color: #428bca;
+  background-color: #fff;
+  }
+
+.panel {
+  border: none;
+  }
+
+.panel-heading {
+  border-bottom: none;
+  }
+
+.panel-title {
+  color: #fff;
+  }
+
+.panel-footer {
+  border-top: none;
+  .pagination {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    }
+  }
+
+.panel-success {
+  .panel-heading {
+    background-color: #56b349;
+    }
+  }
+
+.panel-info {
+  .panel-heading {
+    background-color: #0098cd;
+    }
+  }
+
+.panel-warning {
+  .panel-heading {
+    background-color: #f2b835;
+    }
+  }
+
+.panel-danger {
+  .panel-heading {
+    background-color: #e33d43;
+    }
+  }
+
+.panel .table {
+  margin: 0;
+  }

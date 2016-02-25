@@ -1,0 +1,13 @@
+<div uib-dropdown
+  class="pvdm-download-icon">
+
+  <a href uib-dropdown-toggle
+     pvdm-icon="download-alt"></a>
+
+  <ul class="dropdown-menu dropdown-menu-right">
+    <li ng-repeat="link in $ctrl.downloadLinks">
+      <a translate href="{{link.url}}">{{link.label}}</a>
+    </li>
+  </ul>
+
+</div>

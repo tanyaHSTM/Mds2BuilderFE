@@ -1,0 +1,11 @@
+<div class="page-level-messages">
+  <div ng-repeat="(key,val) in $ctrl.messages.data.persistent" class="alert alert-{{key}}">
+    <span class="glyphicon glyphicon-{{$ctrl.types[key]}} alert-icon alert-{{key}}-icon"></span>
+    <p ng-repeat="msg in val" ng-bind-html="msg"></p>
+  </div>
+  <div ng-repeat="(key,val) in $ctrl.messages.data.currentRoute" class="alert alert-{{key}}">
+    <span class="glyphicon glyphicon-{{$ctrl.types[key]}} alert-icon alert-{{key}}-icon"></span>
+    <button class="close" ng-click="$ctrl.messages.clearByType(key)" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p ng-repeat="msg in val" ng-bind-html="msg"></p>
+  </div>
+</div>

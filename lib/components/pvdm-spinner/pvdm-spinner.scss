@@ -1,0 +1,48 @@
+.pvdm-spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1500;
+  text-align: center;
+  display: none;
+  &.active {
+    display: block;
+    }
+  }
+
+.pvdm-spinner-mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1600;
+  background-color: black;
+  opacity: 0.5;
+  }
+
+.pvdm-spinner {
+  position: relative;
+  margin-top: 15%;
+  z-index: 1700;
+  color: #fff;
+  font-size: 100px;
+  text-shadow: 0px 0px 4px #666;
+  }
+
+.pvdm-spinner-message {
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+  z-index: 1700;
+  color: #fff;
+  display: block;
+  text-shadow: 0px 0px 4px #666;
+  }

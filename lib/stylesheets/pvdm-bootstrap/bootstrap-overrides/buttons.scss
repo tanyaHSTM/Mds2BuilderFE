@@ -1,0 +1,55 @@
+/**
+ * Future-proof disabling of clicks
+ */
+
+.btn {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    pointer-events: none;
+    }
+  }
+
+/**
+ * Gradient prefixes are not added by autoprefixer,
+ * so here, we add them manually.
+ */
+
+.btn-primary {
+  color: white !important;
+  border: 1px solid #4178BE !important;
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #365EBF), color-stop(1, #2546AC) );
+  background: -moz-linear-gradient( center top, #365EBF 5%, #2546AC 100% );
+  background: linear-gradient( center top, #365EBF 5%, #2546AC 100% );
+  &:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2546AC), color-stop(1, #365EBF) );
+    background: -moz-linear-gradient( center top, #2546AC 5%, #365EBF 100% );
+    background: linear-gradient( center top, #2546AC 5%, #365EBF 100% );
+    color: #E0E0E0;
+    }
+  }
+
+.btn-default {
+  border: 1px solid #C7C7C7;
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFFFFF), color-stop(1, #F4F4F4) );
+  background: -moz-linear-gradient( center top, #FFFFFF 5%, #F4F4F4 100% );
+  background: linear-gradient( center top, #FFFFFF 5%, #F4F4F4 100% );
+  &:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #F4F4F4), color-stop(1, #FFFFFF) );
+    background: -moz-linear-gradient( center top, #F4F4F4 5%, #FFFFFF 100% );
+    background: linear-gradient( center top, #F4F4F4 5%, #FFFFFF 100% );
+    }
+  }
+
+.btn--center { 
+  display: block;
+  margin: 0 auto;
+  max-width: 40%;
+  min-width: 250px;
+  }
+
+.btn-link {
+  .btn-link-compact {
+    padding: 0 !important;
+    }
+  }

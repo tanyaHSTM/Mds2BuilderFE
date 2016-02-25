@@ -1,0 +1,71 @@
+.pvdm-toggle-switch {
+  cursor: pointer;
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+  border-radius: 11px;
+  width: 55px;
+  &.disabled {
+    opacity: 0.5;
+    cursor: default;
+    }
+  &.on {
+    background: #365EBF;
+    }
+  &.off {
+    background: #C7C7C7;
+    }
+  &.indeterminate {
+    background: #365EBF;
+    background: linear-gradient(to right, #365EBF 0%, #AEAEAE 100%);
+    }
+  }
+
+.pvdm-toggle-thumb {
+  display: block;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 2px;
+  border-radius: 10px;
+  background: #fff;
+  .on > & {
+    right: 2px;
+    }
+  .off > & {
+    left: 2px;
+    }
+  .indeterminate > & {
+    left: 50%;
+    margin-left: -10px;
+    }
+  }
+
+.pvdm-toggle-label {
+  position: absolute;
+  display: block;
+  top: 0;
+  line-height: 22px;
+  height: 22px;
+  font-size: 10px;
+  text-transform: uppercase;
+  }
+
+.pvdm-toggle-label-on {
+  color: #fff;
+  left: 10px;
+  .off > &,
+  .indeterminate > & {
+    display: none;
+    }
+  }
+
+.pvdm-toggle-label-off {
+  color: #000;
+  right: 10px;
+  .on > &,
+  .indeterminate > & {
+    display: none;
+    }
+  }

@@ -1,0 +1,61 @@
+$lineColor: #e5e5e5;
+$navIcon-height: 30px;
+$navIcon-width: 30px;
+$height-line: 3px;
+$rotation: 45deg;
+$translateY: ($navIcon-height / 4);  /* '4' here is a magic number. TODO: refactor this */
+$translateX: 0;
+
+.pvdm-nav-icon {
+  width: $navIcon-width * 2;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  }
+
+.pvdm-nav-icon--link {
+  width: $navIcon-width;
+  height: $navIcon-height;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  width: $navIcon-width;
+  height: $navIcon-height;
+  margin: 16px 16px 0 16px;
+
+  .line {
+    display: block;
+    background: $lineColor;
+    width: $navIcon-width;
+    height: $height-line;
+    position: absolute;
+    left: 0;
+    border-radius: 0;
+    &.line-1 {top: 0;}
+    &.line-2 {top: 25%;}
+    &.line-3 {top: 50%;}
+    }
+
+  &:hover {
+    .line-1,
+    .line-2,
+    .line-3 {
+      background: darken($lineColor, 15%)
+      }
+    }
+
+  &.active {
+    .line-1 {
+      transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      }
+    .line-2 {
+      opacity:0;
+      }
+    .line-3 {
+      transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      }
+    }
+  }

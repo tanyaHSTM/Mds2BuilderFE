@@ -1,0 +1,25 @@
+.dropdown-filter-wrapper {
+  position:relative;
+  // add margin after this element to put spacing before filter labels
+  margin-right:5px;
+  }
+.dropdown-filter-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 300px;
+  padding: 10px;
+  margin: 2px 0 0;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background-clip: padding-box;
+  .active > & {
+    display: block;
+    }
+  }

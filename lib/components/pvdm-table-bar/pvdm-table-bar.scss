@@ -1,0 +1,29 @@
+@import './lib/stylesheets/pvdm-bootstrap/mixins';
+
+.pvdm-table-bar {
+  @include clearfix;
+  display: block;
+  }
+
+.pvdm-table-bar-tool {
+  display: inline-block;
+  }
+
+.pvdm-table-tool-right {
+  float: right;
+  margin-right: 5px;
+  &:first-child {
+    margin-right: 0 !important;
+    }
+  }
+
+.pvdm-table-tool-left {
+  float: left;
+  margin-left: 5px;
+  &:first-child {
+    margin-left: 0 !important;
+    }
+  &:last-child {
+    margin-right: 5px !important;
+    }
+  }

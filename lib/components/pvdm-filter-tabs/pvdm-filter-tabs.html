@@ -1,0 +1,25 @@
+<div class="pvdm-filter-tabs">
+  <span
+    ng-repeat="(key,value) in $ctrl.filterManager.params"
+    ng-if="value.value"
+    class="pvdm-filter-tab">
+
+      <span
+        ng-if="value.label"
+        class="pvdm-filter-tab-label">{{value.label}}</span>
+
+      <span
+        ng-if="!value.label"
+        class="pvdm-filter-tab-value">
+        <span translate>app.filter_text</span>
+        {{value.value}}
+      </span>
+  
+      <span
+        ng-click="$ctrl.clear(key)"
+        pvdm-icon="remove-2"
+        class="pvdm-filter-tab--remove">
+      </span>
+  
+  </span>
+</div>

@@ -1,0 +1,6 @@
+.DS_Store
+.ruby-gemset
+.ruby-version
+bower_components
+node_modules
+dev/**/*

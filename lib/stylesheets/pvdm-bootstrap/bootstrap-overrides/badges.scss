@@ -1,0 +1,8 @@
+.badge {
+  vertical-align: baseline;
+  .btn-xs &,
+  .btn-group-xs > .btn & {
+    top: 0;
+    padding: 1px 5px;
+    }
+  }

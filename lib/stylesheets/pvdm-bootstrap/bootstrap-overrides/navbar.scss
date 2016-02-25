@@ -1,0 +1,22 @@
+/*
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  z-index: 1200;
+  }
+*/
+
+.navbar-brand {
+  cursor: pointer;
+  padding: 0;
+  }
+
+.navbar-brand-logo {
+  border-left: 1px solid gray;
+  display: inline-block;
+  text-indent: -9999px;
+  }
+
+.navbar-inverse {
+  background-color: #464646 !important;
+  }

@@ -1,0 +1,17 @@
+.pvdm-sort-column {
+  cursor: pointer;
+  }
+
+.pvdm-sort-link {
+  white-space: nowrap;
+  padding-right: 16px;
+  position: relative;
+  [class*="glyphicon-"] {
+    position: absolute;
+    right: 0;
+    }
+  }
+
+th a:hover {
+  text-decoration: none;
+  }

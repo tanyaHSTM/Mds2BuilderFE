@@ -1,0 +1,71 @@
+@import './lib/stylesheets/pvdm-bootstrap/mixins';
+
+.pvdm-drawer-wrapper {
+  outline: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  }
+
+.pvdm-drawer {
+  z-index: 1350;
+  background: #EFEFEF;
+  height: 100%;
+  width: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: -5px 0px 3px 0px rgba(0,0,0,0.27);
+  }
+
+.pvdm-drawer-header {
+  margin: 0;
+  padding: 0 50px 0 30px;
+  font-size: 20px;
+  line-height: 51px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  small {
+    color:#444;
+    }
+  }
+
+.pvdm-drawer-body {
+  position: absolute;
+  top: 51px;
+  right: 25px;
+  bottom: 51px;
+  left: 30px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-top:20px;
+  }
+
+.pvdm-drawer-footer {
+  @include clearfix;
+  margin: 0;
+  padding: 0 25px 0 30px;
+  line-height: 51px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #464646;
+  }
+
+.pvdm-drawer-primary-actions {
+  float: right;
+  }
+
+.pvdm-drawer-secondary-actions {
+  float: left;
+  }

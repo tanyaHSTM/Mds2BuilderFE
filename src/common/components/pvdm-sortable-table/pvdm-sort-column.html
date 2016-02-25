@@ -1,0 +1,10 @@
+<a href
+  class="pvdm-sort-link">
+
+  <ng-transclude></ng-transclude>
+
+  <span
+    ng-if="collection.key===sortBy"
+    ng-class="{'glyphicon-chevron-up':!collection.reverse, 'glyphicon-chevron-down':collection.reverse}"></span>
+
+</a>

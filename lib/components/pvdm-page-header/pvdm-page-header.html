@@ -1,0 +1,33 @@
+<div>
+
+  <div class="pvdm-page-header">
+
+    <div
+      class="pvdm-page-header-back"
+      ng-if="$ctrl.backUrl">
+      <a
+        ng-href="{{$ctrl.backUrl}}">
+        <span
+          pvdm-icon="chevron-left"
+          class="pvdm-back-icon"></span>
+        <span translate
+          class="pvdm-back-text">{{$ctrl.backLabel}}</span>
+      </a>
+    </div>
+
+    <h1 translate
+      ng-if="$ctrl.header"
+      class="pvdm-page-header-title">{{$ctrl.header}}</h1>
+
+    <span translate
+      ng-if="$ctrl.subHeader"
+      class="pvdm-page-sub-header">{{$ctrl.subHeader}}</span>
+
+    <ng-transclude></ng-transclude>
+
+  </div>
+
+  <!--Messages-->
+  <pvdm-messages></pvdm-messages>
+
+</div>

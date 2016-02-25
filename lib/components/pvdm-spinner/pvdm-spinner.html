@@ -1,0 +1,15 @@
+<div
+  class="pvdm-spinner-wrapper"
+  ng-class="{active: $ctrl.svc.active}"
+  ng-click="$ctrl.blockClick($event)">
+
+  <div class="pvdm-spinner-mask"></div>
+
+  <span
+    pvdm-icon="refresh"
+    class="pvdm-spinner spin"></span>
+
+  <span translate
+    class="pvdm-spinner-message">{{::$ctrl.svc.message}}</span>
+
+</div>

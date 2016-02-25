@@ -1,0 +1,25 @@
+<div
+  class="pvdm-stage"
+  ng-class="{active:$ctrl.active}">
+
+  <div ng-transclude
+    ng-if="$ctrl.active"
+    class="pvdm-stage-content">
+      <!--content injected here-->
+  </div>
+
+  <span
+    class="pvdm-stage-toggle"
+    ng-click="$ctrl.toggle()"
+    ng-switch="$ctrl.active">
+    <span
+      pvdm-icon="chevron-up"
+      class="pvdm-stage-deactivate"
+      ng-switch-when="true"></span>
+    <span
+      pvdm-icon="chevron-down"
+      class="pvdm-stage-activate"
+      ng-switch-when="false"></span>
+  </span>
+
+</div>

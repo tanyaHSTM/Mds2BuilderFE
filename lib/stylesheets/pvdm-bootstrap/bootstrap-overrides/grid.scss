@@ -1,0 +1,12 @@
+/**
+ * Use less padding on smaller screens
+ */
+
+.container-fluid {
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  @media screen and (min-width: 768px - 1) {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+    }
+  }

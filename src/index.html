@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-jq
+  id="ng-app"
+  lang="en-us"
+  class="no-js"
+  ng-app="pvdm">
+
+<head>
+  <title>abaqis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="stylesheet" href="<%= static_path(@conn, "/css/styles.css") %>">
+  <script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>
+  <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+</head>
+
+<body>
+
+  <!-- Only show if JS DISABLED -->
+  <noscript>
+    <div class="alert alert-danger javascript-disabled">
+      You either have Javascript disabled or there was an error rendering the page. Please enable Javascript or clear your cache and reload the page.
+    </div>
+  </noscript>
+
+  <ui-view></ui-view>
+
+</body>
+
+</html>

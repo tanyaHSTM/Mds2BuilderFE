@@ -1,0 +1,46 @@
+/**
+ * Temporary
+ */
+
+.radio.ng-scope {
+  margin-top:0;
+  }
+
+[ng-cloak]{
+  display: none!important;
+  }
+
+[data-toggle]:hover {
+  text-decoration:none;
+  }
+
+.label [class*="glyphicon-"] {
+  color: inherit!important;
+  position: relative;
+  top: 1px;
+  }
+
+.javascript-disabled {
+  margin: 20px;
+  }
+
+tr td.checkbox-cell {
+  vertical-align: middle!important;
+  }
+
+// @TODO: this applys to duplicate ssn validation on new resident create/edit. Needs a home.
+// fyi: similar to validation styles in new user create...
+.pvdm-inline-warning--icon {
+  float: left;
+  clear: right;
+  width: 10%;
+  display: block;
+  margin-top: 10px;
+  }
+
+.pvdm-inline-warning--text {
+  float: left;
+  display: block;
+  width: 90%;
+  padding-left: 10px;
+  }

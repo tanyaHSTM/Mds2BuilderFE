@@ -1,0 +1,22 @@
+<div class="pvdm-text-search form-group has-feedback">
+
+  <input
+    type="text"
+    id="search-input"
+    class="form-control pvdm-text-search-input"
+    ng-model="$ctrl.model"
+    placeholder="{{$ctrl.label|translate}}">
+
+  <i
+    ng-hide="$ctrl.model"
+    pvdm-icon="search"
+    class="form-control-feedback pvdm-text-search-icon"></i>
+
+  <a href
+    ng-show="$ctrl.model"
+    pvdm-icon="remove-2"
+    id="search-cancel"
+    class="form-control-feedback pvdm-text-search-clear"
+    ng-click="$ctrl.clear()"></a>
+
+</div>

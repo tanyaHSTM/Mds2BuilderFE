@@ -1,0 +1,12 @@
+.pvdm-link-row {
+  td,
+  th {
+    cursor: pointer;
+    &.ignore-click {
+      cursor: default;
+      }
+    }
+  &.selected {
+    background-color: #E0E0E0 !important;
+    }
+  }

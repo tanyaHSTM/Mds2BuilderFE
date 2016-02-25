@@ -1,0 +1,40 @@
+@import './lib/stylesheets/pvdm-bootstrap/mixins';
+
+.modal-footer {
+  @include clearfix;
+  }
+
+.modal-primary-actions {
+  float: right;
+  }
+
+.modal-secondary-actions {
+  float: left;
+  }
+
+.modal-hero {
+  position: relative;
+  .modal-hero-icon {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    font-size: 50px;
+    display: block;
+    margin: 0 auto;
+    }
+  .modal-hero-text {
+    min-height: 80px;
+    margin-top: 30px;
+    padding: 0 20px 0 100px;
+    display: block;
+    }
+  .modal-hero-header {
+    display: block;
+    font-size: 20px;
+    line-height:25px;
+    margin-bottom:20px;
+    }
+  .modal-hero-detail {
+    display: block;
+    }
+  }

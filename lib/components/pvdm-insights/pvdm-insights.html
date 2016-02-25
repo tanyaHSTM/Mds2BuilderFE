@@ -1,0 +1,10 @@
+<div class="pvdm-insights">
+  <pvdm-insight
+    ng-repeat="insight in insightsCtrl.insights"
+    type="{{insight.type}}"
+    active="insightsCtrl.filter.params[insight.param].value"
+    param="{{insight.param}}"
+    count="insight.count"
+    label="{{insight.label}}"
+    tip="{{insight.tip|translate}}"></pvdm-insight>
+</div>

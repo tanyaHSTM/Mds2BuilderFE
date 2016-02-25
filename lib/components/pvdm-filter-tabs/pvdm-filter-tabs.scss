@@ -1,0 +1,47 @@
+@import './lib/stylesheets/pvdm-bootstrap/mixins';
+
+/**
+ * Filter tabs container
+ *
+ * this component assumes a 'display:block' context. It replicates
+ * styles within pvdm-table-bar and pvdm-table-bar-left. The
+ * reason for this duplication is to build more robust layouts that
+ * don't break on skinny screens while aslo avoiding redundant spacing bugs.
+ * This is something that we can refactor once we get into flexbox land.
+ *
+ * 1. remove the left margin from the third child (the first label). This fixes
+ * the rwd margin bug. It works because margin is also explicitly set on the filter
+ * button. Another hack that will be simplified with flexbox.
+ */
+.pvdm-filter-tabs {
+  @include clearfix;
+  display: inline-block;
+  float: left;
+  margin-left: 5px;
+  &:nth-child(3) {
+    margin-left: 0 !important; /* 1 */
+    }
+  }
+
+/**
+ * PVDM Filter Tab
+ */
+.pvdm-filter-tab {
+  box-sizing: border-box; 
+  position: relative;
+  top: 5px; /* wtf? */
+  margin: 0 3px 3px 0;
+  border: 1px solid #AEAEAE;
+  padding: 8px 5px;
+  color: #AEAEAE;
+  .pvdm-filter-tab--remove {
+    position: relative;
+    top: 2px;
+    color: #365EBF !important;
+    cursor: pointer;
+    margin-left: 5px;
+    &:hover {
+      color: darken(#365EBF, 15%) !important;
+      }
+    }
+  }

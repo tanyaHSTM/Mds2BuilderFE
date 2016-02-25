@@ -1,0 +1,16 @@
+# Use this file to document the versions of the primary
+# tool chain items.
+#
+# This needs to be in Bash script format, so there must be
+# no spaces on either side of the '=' sign. Please don't
+# try to make it 'pretty'. Just set the version number(s)
+# and leave the rest alone
+
+# The version of NodeJs
+NODE_VERSION=v4.1.0
+
+# The version of the globally installed Bower
+BOWER_VERSION=1.5.2
+
+# The version of the globally installed Gulp
+GULP_VERSION=3.9.0
