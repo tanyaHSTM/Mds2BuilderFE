@@ -1,55 +1,13 @@
-.pvdm-logo--sm,
-.pvdm-logo--lg {
-  display: none;
-  }
-
 .pvdm-logo {
-  & .pvdm-logo--sm {
-    @media (max-width: 360px) {
-      display: inline-block !important;
-      position: absolute;
-      top: 15px;
-      left: 70px;
-      width: 30px;
-      } 
-    }
-  & .pvdm-logo--lg {
-     @media (min-width: 361px) {
-      display: inline-block !important; 
-      position: absolute;
-      top: -5px;
-      left: 70px;
-      width: 100px;
-      } 
-    }
+  float: left;
+  font-size: 1.4em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    text-decoration: none;
   }
+}
 
-.pvdm-logo--border-left {
-  border-right: 1px solid #777677;
-  height: 50px;
-  position: absolute;
-  left: 60px;
-  top: 0;
-  }
-
-.pvdm-logo--border-right {
-  border-right: 1px solid #777677;
-  height: 50px;
-  position: absolute;
-  left: 180px;
-  top: 0;
-  @media (max-width: 360px) {
-    display: none;
-    } 
-  }
-
-.unauthorized {
-  .pvdm-logo--sm,
-  .pvdm-logo--lg {
-    left: 20px;
-    }
-  .pvdm-logo--border-left,
-  .pvdm-logo--border-right {
-    display: none;
-    }
-  }
