@@ -8,12 +8,11 @@ angular
     templateUrl: 'pvdm-filter-tabs.html'
     controller: 'pvdmFilterTabsCtrl'
     bindings:
-      filterManager: '='
+      filterManager: '<'
   )
 
   .controller( 'pvdmFilterTabsCtrl', ->
-    vm = @
-    vm.clear = (param) ->
-      vm.filterManager.clear(param)
+    @clear = (param) =>
+      @filterManager.clear(param)
     return
   )

@@ -7,6 +7,7 @@ angular
   .component( 'pvdmProgressIcon',
     templateUrl: 'pvdm-progress-icon.html'
     controller: 'pvdmProgressIconCtrl'
+    controllerAs: 'iconCtrl'
     bindings:
       complete: '@'
       label: '@'

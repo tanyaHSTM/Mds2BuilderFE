@@ -9,5 +9,10 @@ angular
     templateUrl: 'pvdm-logo.html'
   )
 
-  .controller( 'pvdmLogoController', () ->
+  .controller( 'pvdmLogoController', (offCanvasNav) ->
+    @toggle = (event) ->
+      event.stopPropagation()
+      offCanvasNav.toggle()
+    return
+
   )

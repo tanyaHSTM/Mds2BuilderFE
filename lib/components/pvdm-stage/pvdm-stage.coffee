@@ -13,9 +13,8 @@ angular
   )
 
   .controller( 'pvdmStageCtrl', ->
-    vm = @
-    vm.active ||= true
-    vm.toggle = ->
-      vm.active = !vm.active
+    @active ||= true
+    @toggle = =>
+      @active = !@active
     return
   )

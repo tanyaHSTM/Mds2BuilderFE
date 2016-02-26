@@ -11,16 +11,16 @@
       top: 15px;
       left: 70px;
       width: 30px;
-      }
+      } 
     }
   & .pvdm-logo--lg {
      @media (min-width: 361px) {
-      display: inline-block !important;
+      display: inline-block !important; 
       position: absolute;
       top: -5px;
       left: 70px;
       width: 100px;
-      }
+      } 
     }
   }
 
@@ -40,6 +40,16 @@
   top: 0;
   @media (max-width: 360px) {
     display: none;
-    }
+    } 
   }
 
+.unauthorized {
+  .pvdm-logo--sm,
+  .pvdm-logo--lg {
+    left: 20px;
+    }
+  .pvdm-logo--border-left,
+  .pvdm-logo--border-right {
+    display: none;
+    }
+  }

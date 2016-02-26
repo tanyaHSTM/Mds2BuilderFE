@@ -9,6 +9,10 @@ angular
     templateUrl: 'pvdm-nav-icon.html'
   )
 
-  .controller( 'pvdmNavIconCtrl', () ->
+  .controller( 'pvdmNavIconCtrl', (offCanvasNav) ->
+    @ocnav = offCanvasNav
+    @toggle = (event) ->
+      offCanvasNav.toggle()
+      event.stopPropagation()
     return
   )

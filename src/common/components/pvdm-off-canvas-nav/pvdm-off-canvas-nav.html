@@ -1,0 +1,76 @@
+<div
+  class="pvdmOffCanvasNav"
+  ng-class="{active:sidebar.navService.active}">
+
+  <!-- Main nav -->
+  <nav class="pvdmNavAccordian--group navmenu navmenu-default navmenu-fixed-left">
+
+    <!-- Manage -->
+    <div class="pvdmNavAccordian pvdm-manage">
+
+      <a href
+        class="pvdmNavAccordian--heading">
+          <span pvdm-icon="cogwheel"></span>
+          <span translate>manage.label</span>
+      </a>
+
+      <nav class="pvdmNavAccordian--collapse">
+        <!--Facilities-->
+        <li ng-if="sidebar.showMultipleFacilitiesLink"
+          ng-class="{selected:sidebar.facilitiesSelected}">
+          <a translate
+            href="#/manage/facilities"
+            id="ocn-facilities-link"
+            class="pvdm-ocn-link"
+            ng-click="sidebar.closeNav()">
+              facilities.label
+          </a>
+        </li>
+        <!--Facility-->
+        <li ng-if="sidebar.showSingleFacilityLink"
+          ng-class="{selected:sidebar.facilitiesSelected}">
+          <a translate
+            href="#/manage/facilities/{{sidebar.session.user.facilityIds[0]}}"
+            id="ocn-facility-link"
+            class="pvdm-ocn-link"
+            ng-click="sidebar.closeNav()">
+              facilities.facility
+          </a>
+        </li>
+        <!--Users-->
+        <li ng-if="sidebar.showUsersLink"
+          ng-class="{selected:sidebar.usersSelected}">
+          <a translate
+            href="#/manage/users"
+            id="ocn-users-link"
+            class="pvdm-ocn-link"
+            ng-click="sidebar.closeNav()">
+              users.label
+          </a>
+        </li>
+        <!--MDS-->
+        <li ng-if="sidebar.showMdsLink"
+          ng-class="{selected:sidebar.mdsSelected}">
+          <a translate
+            href="#/manage/mds"
+            id="ocn-mds-link"
+            class="pvdm-ocn-link"
+            ng-click="sidebar.closeNav()">
+              mds.label
+          </a>
+        </li>
+      </nav>
+    </div>
+
+  </nav>
+
+  <div class="footer">
+    <p class="copy-right">
+      <span translate>app.copyright</span>, {{$ctrl.year}}<br />
+      <a translate
+        href="https://abaqis.s3.amazonaws.com/abaqis_Terms_of_Use.pdf"
+        target="_blank">app.terms</a>
+    </p>
+  </div>
+
+</div>

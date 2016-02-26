@@ -14,43 +14,46 @@ module.exports = (config) ->
     # list of files / patterns to load in the browser
     files: [
       # Vendor
-      "./bower_components/pvdm-analytics/build/analytics.js",
       "./bower_components/jquery/dist/jquery.min.js",
-      "./bower_components/angular/angular.min.js",
+      "./bower_components/messageformat/messageformat.js",
+      "./bower_components/angular/angular.js",
       "./bower_components/angular-mocks/angular-mocks.js",
-      "./bower_components/angular-messages/angular-messages.min.js",
-      "./bower_components/angular-sanitize/angular-sanitize.min.js",
-      "./bower_components/angular-translate/angular-translate.min.js",
-      "./bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js",
-      "./bower_components/angularjs-rails-resource/angularjs-rails-resource.min.js",
-      "./bower_components/angularjs-rails-resource/extensions/snapshots.min.js",
-      "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
-      "./bower_components/angular-file-upload/angular-file-upload.min.js",
+#       "./bower_components/angular-google-analytics/dist/angular-google-analytics.js",
+      "./bower_components/angular-cookies/angular-cookies.js",
+      "./bower_components/angular-messages/angular-messages.js",
+      "./bower_components/angular-sanitize/angular-sanitize.js",
+      "./bower_components/angular-translate/angular-translate.js",
+      "./bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js",
+      "./bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js",
+      "./bower_components/angular-translate-storage-local/angular-translate-storage-local.js",
+      "./bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js",
+      "./bower_components/angularjs-rails-resource/angularjs-rails-resource.js",
+      "./bower_components/angular-ui-router/release/angular-ui-router.js",
+      "./bower_components/angular-file-upload/dist/angular-file-upload.min.js",
+      "./bower_components/angular-validation-match/dist/angular-validation-match.js",
+      "./bower_components/angular-locker/dist/angular-locker.js",
+      "./bower_components/angularUtils-pagination/dirPagination.js",
+      "./bower_components/autofill-event/src/autofill-event.js",
+      "./bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+      "./bower_components/ng-idle/angular-idle.js",
+      "./bower_components/lodash/lodash.js",
       "./bower_components/spin.js/spin.js",
-      "./bower_components/angular-validation-match/dist/angular-validation-match.min.js",
-      "./bower_components/angular-locker/dist/angular-locker.min.js",
-      "./bower_components/ng-idle/angular-idle.min.js",
-      "./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
-      "./bower_components/lodash/lodash.min.js",
-      "./bower_components/pvdm-directives/build/pvdm-directives.min.js",
-      "./bower_components/pvdm-checklist/build/pvdm-checklist.min.js",
-      "./bower_components/pvdm-notifications/build/pvdm-notifications.min.js",
-      "./bower_components/pvdm-analytics/build/pvdm-analytics.min.js",
-      "./bower_components/pvdm-auth/build/pvdm-auth.min.js",
-      "./bower_components/pvdm-highcharts/build/pvdm-highcharts.min.js",
-      "./bower_components/pvdm-icon/build/pvdm-icon.min.js",
-      "./bower_components/pvdm-ssn/build/pvdm-ssn.min.js",
-      "./bower_components/angular-animate/angular-animate.min.js",
-      "./bower_components/angular-touch/angular-touch.min.js",
+      "./bower_components/moment/moment.js",
+      "./bower_components/angular-animate/angular-animate.js",
+      "./bower_components/angular-touch/angular-touch.js",
+      "./bower_components/re-tree/re-tree.js",
+      "./bower_components/ng-device-detector/ng-device-detector.js",
       # App
-      "./src/**/*module.coffee",
-      "./src/**/*.coffee",
+      "./lib/**/*-module.coffee",
+      "./src/**/*-module.coffee",
+      "./lib/**/*.coffee",
+      "./src/**/*.coffee"
       # Templates
+      "./lib/**/*.html",
       "./src/**/*.html",
       # Tests
-      "./tests/unit/**/*-spec.coffee"
-#      "./tests/unit/models/facility-spec.coffee"
-#      "./tests/unit/components/facility-group-picker-spec.coffee"
+      "./lib/**/*-spec.coffee",
+      "./src/**/*-spec.coffee"
     ]
 
     # Provide templates for testing

@@ -17,7 +17,7 @@ module.exports = (gulp, $) ->
         .pipe( $.angularTemplatecache() )
 
     coffee = ->
-      gulp.src( ["./src/**/*module.coffee", "./lib/**/*module.coffee", "./lib/**/*.coffee", "./src/**/*.coffee"] )
+      gulp.src( ["!./**/*spec.coffee", "./src/**/*module.coffee", "./lib/**/*module.coffee", "./lib/**/*.coffee", "./src/**/*.coffee"] )
         .pipe( $.changed( "./dev/js" ) )
         .pipe( $.coffee() )
         .pipe( $.ngAnnotate() )
