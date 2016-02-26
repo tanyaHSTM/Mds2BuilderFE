@@ -1,3 +1,5 @@
 "app": {
-  "label":"MDS 2.0 Builder"
+  "label":"MDS 2.0 Builder",
+  "full_assessment":"Full",
+  "partial_assessment":"Partial"
 }
