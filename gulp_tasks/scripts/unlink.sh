@@ -1,19 +1,19 @@
 #!/bin/bash
 FE_DIR=$(pwd)
-A2_DIR=$(cd "../abaqis2"; pwd)
+BE_DIR=$(cd "../Mds2BuilderBE"; pwd)
 
 for f in css fonts img js locales rev
 do
-  if [ -L "${A2_DIR}/public/${f}" ]
+  if [ -L "${BE_DIR}/priv/static/${f}" ]
   then
     # In this case, we're looking at a symbolic
     # link; just delete the link
-    rm -f "${A2_DIR}/public/${f}"
+    rm -f "${BE_DIR}/priv/static/${f}"
   else
     # In this case, we're looking at a real
     # directory; recursively delete the directory.
-    rm -fr "${A2_DIR}/public/${f}"
+    rm -fr "${BE_DIR}/priv/static/${f}"
   fi
 done
 
-rm -f "${A2_DIR}/app/views/nr/sessions/show.html.erb"
+rm -f "${BE_DIR}/web/templates/layout/app.html.eex"
