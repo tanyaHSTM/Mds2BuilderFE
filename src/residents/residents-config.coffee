@@ -7,10 +7,10 @@ angular
   .config( ($stateProvider) ->
 
     $stateProvider
-      .state('residents:form',
+      .state('residents',
         parent: 'layout:primary'
         url: '/resident_form'
         templateUrl: 'resident-form.html'
-        controller: 'residents.controller'
+        controller: 'residents.controller as residentsCtrl'
       )
   )

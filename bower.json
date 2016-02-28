@@ -38,7 +38,8 @@
     "ng-device-detector": "2.0.3",
     "ng-idle": "1.1.1",
     "re-tree": "0.0.2",
-    "spin.js": "2.3.2"
+    "spin.js": "2.3.2",
+    "ng-csv": "0.3.6"
   },
   "resolutions": {
     "angular": "1.5.0",

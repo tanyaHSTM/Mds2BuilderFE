@@ -16,15 +16,7 @@ angular
           description: 'Name or alias'
         title:
           type: 'string'
-          enum: [
-            'dr'
-            'jr'
-            'sir'
-            'mrs'
-            'mr'
-            'NaN'
-            'dj'
-          ]
+          enum: ['dr', 'jr', 'sir', 'mrs', 'mr']
     $scope.form = [
       '*'
       {
@@ -33,5 +25,8 @@ angular
       }
     ]
     $scope.model = {}
+
+    $scope.getArray = [$scope.model]
+
     return
   )

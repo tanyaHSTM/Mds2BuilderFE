@@ -17,6 +17,7 @@ angular
     'templates',
     'reTree',
     'ng.deviceDetector',
+    'ngCsv',
 
     #
     # PVDM Modules

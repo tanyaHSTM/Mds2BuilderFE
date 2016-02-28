@@ -1,3 +1,3 @@
-<div ng-controller="residents.controller">
-    <form sf-schema="schema" sf-form="form" sf-model="model"></form>
-</div>
+<form sf-schema="schema" sf-form="form" sf-model="model"></form>
+<button type="button" ng-csv="getArray" filename="test.csv">Export</button>
+<p>{{model}}</p>
