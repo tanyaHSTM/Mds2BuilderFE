@@ -13,6 +13,7 @@ angular
     'ui.bootstrap',
     'ui.router',
     'pascalprecht.translate',
+    'schemaForm',
     'templates',
     'reTree',
     'ng.deviceDetector',
