@@ -2,9 +2,9 @@
 
 angular
 
-  .module( "pvdm.residents" )
+  .module( "pvdm.assessments" )
 
-  .controller( "residents.controller", ($scope, $translate, REGEX) ->
+  .controller( "assessments.controller", ($scope, $translate, REGEX) ->
 
     $scope.REGEX = REGEX
 

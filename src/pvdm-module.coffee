@@ -32,7 +32,7 @@ angular
     'pvdm.components',
     'pvdm.httpErrors',
     'pvdm.mds2',
-    'pvdm.residents',
+    'pvdm.assessments',
 
     #
     # Angular addOn Modules
