@@ -1,4 +1,4 @@
-// npm start
+// to run locally do ---> npm start
 
 var express = require('express');
 var app = express();
