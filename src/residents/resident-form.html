@@ -1,3 +1,32 @@
-<form sf-schema="schema" sf-form="form" sf-model="model"></form>
-<button type="button" ng-csv="getArray" filename="test.csv">Export</button>
-<p>{{model}}</p>
+<!--Header-->
+<pvdm-page-header header="DQI MDS File Template">
+  <pvdm-header-actions>
+    <button
+      type="button"
+      ng-csv="getArray"
+      csv-header="getHeader()"
+      class="btn btn-default pvdm-table"
+      filename="test.csv">
+        <i pvdm-icon="circle-plus"></i>
+        <span translate>Export CSV</span>
+    </button>
+  </pvdm-header-actions>
+</pvdm-page-header>
+<!--Form-->
+<div class="form-group">
+  <form 
+    sf-schema="schema" 
+    sf-model="model">
+  </form>
+
+  <button
+    type="button"
+    ng-csv="getArray"
+    csv-header="getHeader()"
+    class="btn btn-default pvdm-table-tool-left"
+    filename="test.csv">
+      <i pvdm-icon="circle-plus"></i>
+      <span translate>Export CSV</span>
+  </button>
+</div>
+
