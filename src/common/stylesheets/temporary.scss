@@ -45,6 +45,16 @@ tr td.checkbox-cell {
   padding-left: 10px;
   }
 
-.has-success .control-label, .has-success .help-block{
+.has-error   .control-label,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control {
   color: #333333;
   }
+
+input[type="text"], 
+select {
+outline: none;
+box-shadow:none !important;
+border:1px solid #333333 !important;
+}
