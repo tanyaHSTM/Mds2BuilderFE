@@ -42,14 +42,6 @@ gulp.task( "fonts", getTask("fonts") )
 # Copy Images
 gulp.task( "images", getTask("images") )
 
-# Link dev files to abaqis2
-gulp.task( "link", [ "unlink" ], getTask("link") )
-
-gulp.task( "copyProd", [ "unlink" ], getTask("copyProd") )
-
-# Unlink files from abaqis2
-gulp.task( "unlink", getTask("unlink") )
-
 # Copy Locales
 gulp.task( "locales", getTask("locales") )
 
@@ -71,7 +63,7 @@ gulp.task( "default", (cb) ->
     "locales",
     "css",
     "vendorJs",
-    "appJs"],"link", cb)
+    "appJs"], cb)
 )
 
 # Dev build & watch
