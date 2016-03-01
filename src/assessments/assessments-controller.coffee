@@ -4,7 +4,7 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controller", ($scope, $translate, REGEX) ->
+  .controller( "assessments.controller", ($scope, Collection, $translate, REGEX) ->
 
     $scope.REGEX = REGEX
 
@@ -109,7 +109,15 @@ angular
         'C4'
       ]
 
-    $scope.getArray = [$scope.model]
+    $scope.getAssessment = [$scope.model]
+
+    $scope.assessments = new Collection($scope.getAssessment, "Master_no")
+    $scope.assessments.sort()
+
+    $scope.assessmentRecords = $scope.assessments.records
+    $scope.getAssessments = $scope.assessmentRecords
+    $scope.addAssessment = ->
+      $scope.assessmentRecords.push.apply($scope.model)
 
     return
   )

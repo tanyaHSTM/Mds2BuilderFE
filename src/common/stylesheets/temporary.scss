@@ -54,7 +54,12 @@ tr td.checkbox-cell {
 
 input[type="text"], 
 select {
-outline: none;
-box-shadow:none !important;
-border:1px solid #333333 !important;
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid #333333 !important;
+}
+
+.form-group {
+  max-height: 250px;
+  overflow-y: auto;
 }

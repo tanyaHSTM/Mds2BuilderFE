@@ -1,32 +1,61 @@
 <!--Header-->
 <pvdm-page-header header="DQI MDS File Template">
+
   <pvdm-header-actions>
     <button
       type="button"
-      ng-csv="getArray"
+      ng-csv="getAssessment"
       csv-header="getHeader()"
       class="btn btn-default pvdm-table"
-      filename="test.csv">
+      filename="assessment.csv">
+        <span translate>Export Assessment CSV</span>
+    </button>
+    <button
+      type="button"
+      ng-csv="getAssessments"
+      csv-header="getHeader()"
+      class="btn btn-default pvdm-table"
+      filename="assessments.csv">
+        <span translate>Export List CSV</span>
+    </button>
+    <button
+      type="button"
+      ng-click="addAssessment()"
+      class="btn btn-default pvdm-table"
+      filename="assessments.csv">
         <i pvdm-icon="circle-plus"></i>
-        <span translate>Export CSV</span>
+        <span></span>
     </button>
   </pvdm-header-actions>
+
 </pvdm-page-header>
 <!--Form-->
 <div class="form-group">
+
   <form 
     sf-schema="schema" 
     sf-model="model">
   </form>
-
-  <button
-    type="button"
-    ng-csv="getArray"
-    csv-header="getHeader()"
-    class="btn btn-default pvdm-table-tool-left"
-    filename="test.csv">
-      <i pvdm-icon="circle-plus"></i>
-      <span translate>Export CSV</span>
-  </button>
 </div>
+<!--table-->
+<div class="table-responsive">
 
+  <table pvdm-sortable-table
+    collection="assessments"
+    class="table table-striped">
+    <thead>
+      <tr>
+        <th pvdm-sort-column="'Master_no'"><span translate>Master Number</span></th>
+        <th pvdm-sort-column="'Resident_identifier'"><span translate>Resident Identifier</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        ng-repeat="assessment in assessments.records">
+        <td>{{::assessment.Master_no}}</td>
+        <td>{{::assessment.Resident_identifier}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
