@@ -25,7 +25,7 @@ angular
         Resident_identifier:
           type: 'string'
           title: '(Resident_identifier) 10 digit resident identifier'
-          default: '123456789'
+          default: '1234567890'
           minLength: 10
           maxLength: 10
           pattern: REGEX.NUMERIC
@@ -91,6 +91,14 @@ angular
           enum: ['0', '1', '2', '3']
           default: '0'
 
+    $scope.form = [
+      "*",
+      {
+        type: "submit",
+        title: "Save"
+      }
+    ];
+
     $scope.model = {}
     
     # CSV
@@ -109,15 +117,15 @@ angular
         'C4'
       ]
 
-    $scope.getAssessment = [$scope.model]
+    $scope.assessments = []
+    $scope.getAssessments = $scope.assessments
 
-    $scope.assessments = new Collection($scope.getAssessment, "Master_no")
-    $scope.assessments.sort()
-
-    $scope.assessmentRecords = $scope.assessments.records
-    $scope.getAssessments = $scope.assessmentRecords
     $scope.addAssessment = ->
-      $scope.assessmentRecords.push.apply($scope.model)
+      $scope.testData = angular.copy($scope.model)
+      $scope.assessments.push($scope.testData)
+
+    $scope.getCurrentAssessment = [$scope.model]
+    $scope.getAssessmentList = $scope.assessments
 
     return
   )

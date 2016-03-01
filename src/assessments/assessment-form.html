@@ -4,7 +4,7 @@
   <pvdm-header-actions>
     <button
       type="button"
-      ng-csv="getAssessment"
+      ng-csv="getCurrentAssessment"
       csv-header="getHeader()"
       class="btn btn-default pvdm-table"
       filename="assessment.csv">
@@ -12,7 +12,7 @@
     </button>
     <button
       type="button"
-      ng-csv="getAssessments"
+      ng-csv="getAssessmentList"
       csv-header="getHeader()"
       class="btn btn-default pvdm-table"
       filename="assessments.csv">
@@ -32,7 +32,7 @@
 <!--Form-->
 <div class="form-group">
 
-  <form 
+  <form
     sf-schema="schema" 
     sf-model="model">
   </form>
@@ -41,19 +41,18 @@
 <div class="table-responsive">
 
   <table pvdm-sortable-table
-    collection="assessments"
     class="table table-striped">
     <thead>
       <tr>
-        <th pvdm-sort-column="'Master_no'"><span translate>Master Number</span></th>
-        <th pvdm-sort-column="'Resident_identifier'"><span translate>Resident Identifier</span></th>
+        <th><span translate>Master Number</span></th>
+        <th><span translate>Resident Identifier</span></th>
       </tr>
     </thead>
     <tbody>
       <tr
-        ng-repeat="assessment in assessments.records">
-        <td>{{::assessment.Master_no}}</td>
-        <td>{{::assessment.Resident_identifier}}</td>
+        ng-repeat="assessment in assessments track by $index">
+        <td>{{assessment.Master_no}}</td>
+        <td>{{assessment.Resident_identifier}}</td>
       </tr>
     </tbody>
   </table>
