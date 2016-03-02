@@ -35,6 +35,7 @@
   <form
     sf-schema="schema" 
     sf-model="model">
+    <div class="schema-border"></div>
   </form>
 </div>
 <!--table-->
@@ -56,5 +57,11 @@
       </tr>
     </tbody>
   </table>
+
+  <div ng-if="!assessments.length">
+    <div class="alert alert-info">
+      <p translate>assessments.none_selected</p>
+    </div>
+  </div>
 
 </div>

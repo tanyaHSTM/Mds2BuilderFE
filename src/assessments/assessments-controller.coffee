@@ -101,7 +101,7 @@ angular
 
     $scope.model = {}
     
-    # CSV
+    ### CSV ###
     $scope.getHeader = ->
       [
         'Master_no'
@@ -116,14 +116,13 @@ angular
         'B4'
         'C4'
       ]
-
+    # Populate assesssment table
     $scope.assessments = []
-    $scope.getAssessments = $scope.assessments
 
     $scope.addAssessment = ->
-      $scope.testData = angular.copy($scope.model)
-      $scope.assessments.push($scope.testData)
-
+      $scope.asseeesmentData = angular.copy($scope.model)
+      $scope.assessments.push($scope.asseeesmentData)
+    # Csv download bottun actions
     $scope.getCurrentAssessment = [$scope.model]
     $scope.getAssessmentList = $scope.assessments
 
