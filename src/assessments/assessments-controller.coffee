@@ -17,6 +17,7 @@ angular
           type: 'string'
           title: '(Master_no) Master no. from CCIM'
           default: '1234'
+          required: true
           minLength: 4
           maxLength: 4
           pattern: REGEX.NUMERIC
@@ -26,6 +27,7 @@ angular
           type: 'string'
           title: '(Resident_identifier) 10 digit resident identifier'
           default: '1234567890'
+          required: true
           minLength: 10
           maxLength: 10
           pattern: REGEX.NUMERIC
@@ -53,6 +55,7 @@ angular
           type: 'string'
           title: '(AB1) Admission/Re-entry date'
           default: "20140101"
+          required: true
           minLength: 8
           maxLength: 8
           pattern: REGEX.NUMERIC
@@ -62,6 +65,7 @@ angular
           type: 'string'
           title: '(A3) Assessment Reference Date'
           default: "20150202"
+          required: true
           minLength: 8
           maxLength: 8
           pattern: REGEX.NUMERIC
@@ -515,6 +519,7 @@ angular
           type: 'string'
           title: '(O3) Injections'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -524,6 +529,7 @@ angular
           type: 'string'
           title: '(P1baA) Speech therapy - Days'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -533,6 +539,7 @@ angular
           type: 'string'
           title: '(P1baB) Speech therapy - Minutes'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
@@ -541,6 +548,7 @@ angular
           type: 'string'
           title: '(P1bbA) Occupational therapy - Days'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -550,6 +558,7 @@ angular
           type: 'string'
           title: '(P1bbB) Occupational therapy - Minutes'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
@@ -558,6 +567,7 @@ angular
           type: 'string'
           title: '(P1bcA) Physical therapy - Days'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -567,6 +577,7 @@ angular
           type: 'string'
           title: '(P1bcB) Physical therapy - Minutes'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
@@ -575,6 +586,7 @@ angular
           type: 'string'
           title: '(P1bdA) Respiratory therapy - Days'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
@@ -583,6 +595,7 @@ angular
           type: 'string'
           title: '(P3a) Nursing rehab - Range of motion (passive)'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -592,6 +605,7 @@ angular
           type: 'string'
           title: '(P3b) Nursing rehab - Range of motion (active)'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -601,6 +615,7 @@ angular
           type: 'string'
           title: '(P3c) Nursing rehab - Splint or brace assistance'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -610,6 +625,7 @@ angular
           type: 'string'
           title: '(P3d) Nursing rehab - Bed mobility'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -619,6 +635,7 @@ angular
           type: 'string'
           title: '(P3e) Nursing rehab - Transfer'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -628,6 +645,7 @@ angular
           type: 'string'
           title: '(P3f) Nursing rehab - Walking'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -637,6 +655,7 @@ angular
           type: 'string'
           title: '(P3g) Nursing rehab - Dressing or grooming'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -646,6 +665,7 @@ angular
           type: 'string'
           title: '(P3h) Nursing rehab - Eating or swallowing'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -655,6 +675,7 @@ angular
           type: 'string'
           title: '(P3h) Nursing rehab - Amputation or prosthesis care'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -664,6 +685,7 @@ angular
           type: 'string'
           title: '(P3h) Nursing rehab - Communication'
           default: '0'
+          required: true
           minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
@@ -673,8 +695,7 @@ angular
           type: 'string'
           title: '(P7) Physician Visits'
           default: '0'
-          minLength: 0
-          maxLength: 1
+          maxLength: 2
           pattern: REGEX.VISITS
           validationMessage: "Must be between 0-14"
 
@@ -682,8 +703,8 @@ angular
           type: 'string'
           title: '(P8) Physician Orders'
           default: '0'
-          minLength: 0
-          maxLength: 1
+          required: true
+          maxLength: 2
           pattern: REGEX.VISITS
           validationMessage: "Must be between 0-14"
 
@@ -691,6 +712,7 @@ angular
           type: 'string'
           title: '(IAR-1) Verision'
           default: '2013'
+          required: true
           minLength: 0
           maxLength: 4
           pattern: REGEX.NUMERIC
