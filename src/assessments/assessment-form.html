@@ -5,7 +5,7 @@
     <button
       type="button"
       ng-csv="getCurrentAssessment"
-      csv-header="getHeader()"
+      csv-header="getHeaders()"
       class="btn btn-default pvdm-table"
       filename="assessment.csv">
         <span translate>Export Assessment CSV</span>
@@ -13,7 +13,7 @@
     <button
       type="button"
       ng-csv="getAssessmentList"
-      csv-header="getHeader()"
+      csv-header="getHeaders()"
       class="btn btn-default pvdm-table"
       filename="assessments.csv">
         <span translate>Export List CSV</span>
@@ -62,5 +62,4 @@
       <p translate>assessments.none_selected</p>
     </div>
   </div>
-
 </div>
