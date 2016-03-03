@@ -520,7 +520,6 @@ angular
           title: '(O3) Injections'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -530,7 +529,6 @@ angular
           title: '(P1baA) Speech therapy - Days'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -540,7 +538,6 @@ angular
           title: '(P1baB) Speech therapy - Minutes'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
 
@@ -549,7 +546,6 @@ angular
           title: '(P1bbA) Occupational therapy - Days'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -559,7 +555,6 @@ angular
           title: '(P1bbB) Occupational therapy - Minutes'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
 
@@ -568,7 +563,6 @@ angular
           title: '(P1bcA) Physical therapy - Days'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -578,7 +572,6 @@ angular
           title: '(P1bcB) Physical therapy - Minutes'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
 
@@ -587,7 +580,6 @@ angular
           title: '(P1bdA) Respiratory therapy - Days'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 4
           validationMessage: "Must be between 0-9999"
 
@@ -596,7 +588,6 @@ angular
           title: '(P3a) Nursing rehab - Range of motion (passive)'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -606,7 +597,6 @@ angular
           title: '(P3b) Nursing rehab - Range of motion (active)'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -616,7 +606,6 @@ angular
           title: '(P3c) Nursing rehab - Splint or brace assistance'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -626,7 +615,6 @@ angular
           title: '(P3d) Nursing rehab - Bed mobility'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -636,7 +624,6 @@ angular
           title: '(P3e) Nursing rehab - Transfer'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -646,7 +633,6 @@ angular
           title: '(P3f) Nursing rehab - Walking'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -656,7 +642,6 @@ angular
           title: '(P3g) Nursing rehab - Dressing or grooming'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
@@ -666,27 +651,24 @@ angular
           title: '(P3h) Nursing rehab - Eating or swallowing'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3i:
           type: 'string'
-          title: '(P3h) Nursing rehab - Amputation or prosthesis care'
+          title: '(P3i) Nursing rehab - Amputation or prosthesis care'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3j:
           type: 'string'
-          title: '(P3h) Nursing rehab - Communication'
+          title: '(P3j) Nursing rehab - Communication'
           default: '0'
           required: true
-          minLength: 0
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
