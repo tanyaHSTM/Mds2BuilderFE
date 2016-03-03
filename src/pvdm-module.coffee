@@ -31,7 +31,6 @@ angular
     'pvdm.services',
     'pvdm.components',
     'pvdm.httpErrors',
-    'pvdm.mds2',
     'pvdm.assessments',
 
     #

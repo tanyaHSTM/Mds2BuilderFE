@@ -4,7 +4,11 @@ angular
 
   .module("pvdm.assessments")
 
-  .config( ($stateProvider) ->
+  .config( ($stateProvider, $urlRouterProvider, PATHS) ->
+
+    $urlRouterProvider
+      .when("", PATHS.START_PAGE)
+      .when("/", PATHS.START_PAGE)
 
     $stateProvider
       .state('assessments',

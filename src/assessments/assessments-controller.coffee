@@ -517,7 +517,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P1baA:
@@ -526,7 +526,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P1baB:
@@ -535,7 +535,6 @@ angular
           default: '0'
           minLength: 0
           maxLength: 4
-          pattern: REGEX.NUMERIC
           validationMessage: "Must be between 0-9999"
 
         P1bbA:
@@ -544,7 +543,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P1bbB:
@@ -553,7 +552,6 @@ angular
           default: '0'
           minLength: 0
           maxLength: 4
-          pattern: REGEX.NUMERIC
           validationMessage: "Must be between 0-9999"
 
         P1bcA:
@@ -562,7 +560,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P1bcB:
@@ -571,7 +569,6 @@ angular
           default: '0'
           minLength: 0
           maxLength: 4
-          pattern: REGEX.NUMERIC
           validationMessage: "Must be between 0-9999"
 
         P1bdA:
@@ -580,7 +577,6 @@ angular
           default: '0'
           minLength: 0
           maxLength: 4
-          pattern: REGEX.NUMERIC
           validationMessage: "Must be between 0-9999"
 
         P3a:
@@ -589,7 +585,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3b:
@@ -598,7 +594,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3c:
@@ -607,7 +603,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3d:
@@ -616,7 +612,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3e:
@@ -625,7 +621,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3f:
@@ -634,7 +630,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3g:
@@ -643,7 +639,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3h:
@@ -652,7 +648,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3i:
@@ -661,7 +657,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P3j:
@@ -670,7 +666,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
         P7:
@@ -679,7 +675,7 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.VISITS
           validationMessage: "Must be between 0-14"
 
         P8:
@@ -688,10 +684,10 @@ angular
           default: '0'
           minLength: 0
           maxLength: 1
-          pattern: REGEX.NUMERIC
+          pattern: REGEX.VISITS
           validationMessage: "Must be between 0-14"
 
-        IAR1:
+        "IAR-1":
           type: 'string'
           title: '(IAR-1) Verision'
           default: '2013'
