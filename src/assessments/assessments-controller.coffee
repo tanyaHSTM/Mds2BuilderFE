@@ -4,11 +4,12 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controller", ($scope, Collection, $translate, REGEX, $uibModal) ->
+  .controller( "assessments.controllers.collection", ( Collection, $translate, REGEX, $uibModal) ->
+    
+    vm = @
+    vm.REGEX = REGEX
 
-    $scope.REGEX = REGEX
-
-    $scope.edit = (model) ->
+    vm.edit = (model) ->
       $uibModal.open(
         windowTemplateUrl: 'pvdm-drawer-wrapper.html'
         templateUrl: 'resident-generator.html'
@@ -16,7 +17,7 @@ angular
       )
       
     # Schema Form
-    $scope.schema =
+    vm.schema =
       type: 'object'
       properties:
 
@@ -707,21 +708,21 @@ angular
           pattern: REGEX.NUMERIC
           validationMessage: "Format must be yyyymmdd"
 
-    $scope.model = {}
+    vm.model = {}
     
     ### CSV ###
-    $scope.getHeaders = ->
-      for keyName of $scope.model
+    vm.getHeaders = ->
+      for keyName of vm.model
         key = keyName
 
     # Populate assesssment table
-    $scope.assessments = []
+    vm.assessments = []
 
-    $scope.addAssessment = ->
-      $scope.assessmentData = angular.copy($scope.model)
-      $scope.assessments.push($scope.assessmentData)
+    vm.addAssessment = ->
+      vm.assessmentData = angular.copy(vm.model)
+      vm.assessments.push(vm.assessmentData)
     # Csv download
-    $scope.getAssessmentList = $scope.assessments
+    vm.getAssessmentList = vm.assessments
 
     return
   )

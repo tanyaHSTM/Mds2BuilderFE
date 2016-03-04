@@ -7,7 +7,7 @@
       ng-click="edit()"
       class="btn btn-primary">
         <i pvdm-icon="circle-plus"></i>
-        <span translate>Resident Generator</span>
+        <span translate>assessments.resident_generator</span>
     </button>
   </pvdm-header-actions>
 
@@ -15,8 +15,8 @@
 <!--Form-->
 <div class="form-group">
   <form
-    sf-schema="schema" 
-    sf-model="model">
+    sf-schema="assessmentsCtrl.schema" 
+    sf-model="assessmentsCtrl.model">
   </form>
 </div>
 <!--table-->
@@ -26,20 +26,26 @@
     class="table table-striped">
     <thead>
       <tr>
-        <th><span translate>Master Number</span></th>
-        <th><span translate>Resident Identifier</span></th>
+        <th><span translate>assessments.master_no</span></th>
+        <th><span translate>assessments.resident_identifier</span></th>
+        <th><span translate>assessments.reason</span></th>
+        <th><span translate>assessments.admit_date</span></th>
+        <th><span translate>assessments.ref_date</span></th>
       </tr>
     </thead>
     <tbody>
       <tr
-        ng-repeat="assessment in assessments.slice().reverse() track by $index">
+        ng-repeat="assessment in assessmentsCtrl.assessments.slice().reverse() track by $index">
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
+        <td>{{assessment.AA8}}</td>
+        <td>{{assessment.AB1}}</td>
+        <td>{{assessment.A3}}</td>
       </tr>
     </tbody>
   </table>
 
-  <div ng-if="!assessments.length">
+  <div ng-if="!assessmentsCtrl.assessments.length">
     <div class="alert alert-info">
       <i style="display:inline" pvdm-icon="circle-info"></i>
       <span translate>assessments.none_selected</span>
@@ -49,22 +55,22 @@
 <div class="pvdm-trowser-footer">
 
   <button
-    style="float:right"
     type="button"
-    ng-click="addAssessment()"
-    class="btn btn-primary pvdm-table"
+    ng-click="assessmentsCtrl.addAssessment()"
+    class="btn btn-primary"
+    style="float:right"
     filename="assessments.csv">
       <i pvdm-icon="circle-plus"></i>
       <span></span>
   </button>
   <button
-    style="float:right"
     type="button"
-    ng-csv="getAssessmentList"
+    ng-csv="assessmentsCtrl.getAssessmentList"
     csv-header="getHeaders()"
-    class="btn btn-default pvdm-table"
+    class="btn btn-default"
+    style="float:right"
     filename="assessments.csv">
-      <span translate>Export List CSV</span>
+      <span translate>assessments.export_csv</span>
   </button>
 
 </div>

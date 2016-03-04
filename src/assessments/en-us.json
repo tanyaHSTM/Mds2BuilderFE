@@ -1,3 +1,10 @@
 "assessments":{
-  "none_selected":"Choose assesments to add to list"
+  "resident_generator":"Resident Generator",
+  "master_no":"Master Number",
+  "resident_identifier":"Resident Identifier",
+  "reason":"Reason For Assessment",
+  "admit_date":"Admission/Re-entry date",
+  "ref_date":"Assessment Reference Date",
+  "none_selected":"Choose assesments to add to list",
+  "export_csv":"Export CSV"
 }
