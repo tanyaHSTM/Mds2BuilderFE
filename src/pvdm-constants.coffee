@@ -11,6 +11,8 @@ angular
       value: "mds2builder.heroku.com"
     "DEFAULT_LANGUAGE":
       value: "en-US"
+    "PAGINATION_LIMIT":
+      value: 5
   ))
 
   .constant( "PATHS", Object.defineProperties( {},

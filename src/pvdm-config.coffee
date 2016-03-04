@@ -4,8 +4,12 @@ angular
 
   .module( "pvdm" )
 
-  .config( ($httpProvider, $urlRouterProvider, $stateProvider, $compileProvider, $logProvider, $translateProvider, PATHS, MDS2) ->
+  .config( ($httpProvider, $urlRouterProvider, $stateProvider, $compileProvider, $logProvider, paginationTemplateProvider, $translateProvider, PATHS, MDS2) ->
 
+    #
+    # Custom pagination template
+    paginationTemplateProvider.setPath("pvdm-pagination.html")
+    
     #
     # Define layouts
     layoutPrimary =

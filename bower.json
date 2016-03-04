@@ -30,6 +30,7 @@
     "angular-ui-router": "0.2.15",
     "angular-validation-match": "1.5.2",
     "angularjs-rails-resource": "2.0.0",
+    "angularUtils-pagination": "angular-utils-pagination#0.9.4",
     "autofill-event": "1.0.0",
     "jquery": "2.1.*",
     "lodash": "4.0.0",

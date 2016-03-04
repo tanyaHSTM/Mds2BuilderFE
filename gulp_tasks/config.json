@@ -20,6 +20,7 @@
     "./bower_components/autofill-event/src/autofill-event.js",
     "./bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
     "./bower_components/tv4/tv4.js",
+    "./bower_components/angularUtils-pagination/dirPagination.js",
     "./bower_components/objectpath/lib/ObjectPath.js",
     "./bower_components/angular-schema-form/dist/schema-form.min.js",
     "./bower_components/angular-schema-form/dist/bootstrap-decorator.min.js",

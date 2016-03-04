@@ -4,7 +4,7 @@
   <pvdm-header-actions>
     <button
       type="button"
-      ng-click="edit()"
+      ng-click="assessmentsCtrl.controlDrawer()"
       class="btn btn-primary">
         <i pvdm-icon="circle-plus"></i>
         <span translate>assessments.resident_generator</span>
@@ -35,7 +35,8 @@
     </thead>
     <tbody>
       <tr
-        ng-repeat="assessment in assessmentsCtrl.assessments.slice().reverse() track by $index">
+        dir-paginate="assessment in assessmentsCtrl.assessments.slice().reverse()
+        | itemsPerPage : 3 track by $index">
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
         <td>{{assessment.AA8}}</td>
@@ -44,6 +45,7 @@
       </tr>
     </tbody>
   </table>
+  <dir-pagination-controls></dir-pagination-controls>
 
   <div ng-if="!assessmentsCtrl.assessments.length">
     <div class="alert alert-info">

@@ -12,6 +12,7 @@ angular
     # Third party modules
     'ui.bootstrap',
     'ui.router',
+    'angularUtils.directives.dirPagination',
     'pascalprecht.translate',
     'schemaForm',
     'templates',

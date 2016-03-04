@@ -9,11 +9,11 @@ angular
     vm = @
     vm.REGEX = REGEX
 
-    vm.edit = (model) ->
+    vm.controlDrawer = (model) ->
       $uibModal.open(
         windowTemplateUrl: 'pvdm-drawer-wrapper.html'
         templateUrl: 'resident-generator.html'
-        controller: 'assessments.controller as assessmentCtrl'
+        controller: 'assessments.controllers.collection as assessmentCtrl'
       )
       
     # Schema Form
