@@ -52,14 +52,22 @@ tr td.checkbox-cell {
   color: #333333;
   }
 
-input[type="text"], 
-select {
-  outline: none;
-  box-shadow:none !important;
-  border:1px solid #333333 !important;
+.form-group {
+  max-height: 240px;
+  overflow-y: auto;
 }
 
-.form-group {
-  max-height: 250px;
-  overflow-y: auto;
+.form-control{
+  color: #555;
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid #ccc !important;
+  border-radius: 4px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.control-label{
+  text-color: #ddd;
+  font-size: .9em;
+  line-height: 1.7em;
 }

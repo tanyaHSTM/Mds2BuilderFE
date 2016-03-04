@@ -4,10 +4,17 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controller", ($scope, Collection, $translate, REGEX) ->
+  .controller( "assessments.controller", ($scope, Collection, $translate, REGEX, $uibModal) ->
 
     $scope.REGEX = REGEX
 
+    $scope.edit = (model) ->
+      $uibModal.open(
+        windowTemplateUrl: 'pvdm-drawer-wrapper.html'
+        templateUrl: 'resident-generator.html'
+        controller: 'assessments.controller as assessmentCtrl'
+      )
+      
     # Schema Form
     $scope.schema =
       type: 'object'
@@ -711,10 +718,9 @@ angular
     $scope.assessments = []
 
     $scope.addAssessment = ->
-      $scope.asseeesmentData = angular.copy($scope.model)
-      $scope.assessments.push($scope.asseeesmentData)
-    # Csv download bottun actions
-    $scope.getCurrentAssessment = [$scope.model]
+      $scope.assessmentData = angular.copy($scope.model)
+      $scope.assessments.push($scope.assessmentData)
+    # Csv download
     $scope.getAssessmentList = $scope.assessments
 
     return

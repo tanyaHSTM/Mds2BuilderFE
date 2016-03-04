@@ -4,34 +4,16 @@
   <pvdm-header-actions>
     <button
       type="button"
-      ng-csv="getCurrentAssessment"
-      csv-header="getHeaders()"
-      class="btn btn-default pvdm-table"
-      filename="assessment.csv">
-        <span translate>Export Assessment CSV</span>
-    </button>
-    <button
-      type="button"
-      ng-csv="getAssessmentList"
-      csv-header="getHeaders()"
-      class="btn btn-default pvdm-table"
-      filename="assessments.csv">
-        <span translate>Export List CSV</span>
-    </button>
-    <button
-      type="button"
-      ng-click="addAssessment()"
-      class="btn btn-default pvdm-table"
-      filename="assessments.csv">
+      ng-click="edit()"
+      class="btn btn-primary">
         <i pvdm-icon="circle-plus"></i>
-        <span></span>
+        <span translate>Resident Generator</span>
     </button>
   </pvdm-header-actions>
 
 </pvdm-page-header>
 <!--Form-->
 <div class="form-group">
-
   <form
     sf-schema="schema" 
     sf-model="model">
@@ -50,7 +32,7 @@
     </thead>
     <tbody>
       <tr
-        ng-repeat="assessment in assessments track by $index">
+        ng-repeat="assessment in assessments.slice().reverse() track by $index">
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
       </tr>
@@ -59,7 +41,30 @@
 
   <div ng-if="!assessments.length">
     <div class="alert alert-info">
-      <p translate>assessments.none_selected</p>
+      <i style="display:inline" pvdm-icon="circle-info"></i>
+      <span translate>assessments.none_selected</span>
     </div>
   </div>
+</div>
+<div class="pvdm-trowser-footer">
+
+  <button
+    style="float:right"
+    type="button"
+    ng-click="addAssessment()"
+    class="btn btn-primary pvdm-table"
+    filename="assessments.csv">
+      <i pvdm-icon="circle-plus"></i>
+      <span></span>
+  </button>
+  <button
+    style="float:right"
+    type="button"
+    ng-csv="getAssessmentList"
+    csv-header="getHeaders()"
+    class="btn btn-default pvdm-table"
+    filename="assessments.csv">
+      <span translate>Export List CSV</span>
+  </button>
+
 </div>
