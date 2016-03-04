@@ -1,16 +1,12 @@
 <!--Header-->
 <pvdm-page-header header="DQI MDS File Template">
+  <pvdm-stage
+    active="true"
+    class="pvdm-record-detail-stage">
+    
+    <ng-include src="'options-form.html'"></ng-include>
 
-  <pvdm-header-actions>
-    <button
-      type="button"
-      ng-click="assessmentsCtrl.controlDrawer()"
-      class="btn btn-primary">
-        <i pvdm-icon="circle-plus"></i>
-        <span translate>assessments.resident_generator</span>
-    </button>
-  </pvdm-header-actions>
-
+  </pvdm-stage>
 </pvdm-page-header>
 <!--Form-->
 <div class="form-group">

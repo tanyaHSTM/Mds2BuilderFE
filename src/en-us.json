@@ -1,4 +1,6 @@
 "app": {
   "label":"MDS 2.0 Builder",
+  "required_field":"Required Field",
+  "invalid_characters":"Field contains invalid characters",
   "back":"Back"
 }

@@ -4,17 +4,13 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controllers.collection", ( Collection, $translate, REGEX, $uibModal) ->
+  .controller( "assessments.controllers.collection", ( $translate, REGEX) ->
     
     vm = @
     vm.REGEX = REGEX
-
-    vm.controlDrawer = (model) ->
-      $uibModal.open(
-        windowTemplateUrl: 'pvdm-drawer-wrapper.html'
-        templateUrl: 'resident-generator.html'
-        controller: 'assessments.controllers.collection as assessmentCtrl'
-      )
+    
+    # Options
+    vm.num_residents = ""
       
     # Schema Form
     vm.schema =

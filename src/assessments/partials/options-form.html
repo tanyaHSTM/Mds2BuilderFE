@@ -1,0 +1,35 @@
+<form name="optionsForm">
+  <div class="row">
+    <!--Number of Unique Residents -->
+    <div class="col-md-2">
+
+      <div
+        class="form-group"
+        ng-class="{'has-error':optionsForm.num_residents.$invalid && optionsForm.num_residents.$touched}">
+        <label
+          class="control-label"
+          for="num-residents">
+            <span translate>assessments.num_unique</span>
+        </label>
+        <input required
+          id="num-residents"
+          name="num_residents"
+          type="text"
+          class="form-control"
+          ng-model="assessmentsCtrl.num_residents"
+          autocomplete="off"
+          ng-pattern="assessmentsCtrl.REGEX.NUMERIC"
+          maxlength="4">
+        <div
+          class="messages"
+          ng-messages="optionsForm.num_residents.$error"
+          ng-if="optionsForm.num_residents.$touched">
+            <div class="help-block" ng-message="required">{{'app.required_field'|translate}}</div>
+            <div class="help-block" ng-message="pattern">{{'app.invalid_characters'|translate}}</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</form>

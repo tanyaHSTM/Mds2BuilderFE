@@ -6,5 +6,6 @@
   "admit_date":"Admission/Re-entry date",
   "ref_date":"Assessment Reference Date",
   "none_selected":"Choose assesments to add to list",
-  "export_csv":"Export CSV"
+  "export_csv":"Export CSV",
+  "num_unique":"Number of unique residents"
 }
