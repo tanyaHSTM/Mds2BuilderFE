@@ -15,7 +15,7 @@
           name="num_residents"
           type="text"
           class="form-control"
-          style="width:45%"
+          style="width:40%"
           ng-model="assessmentsCtrl.num_residents"
           autocomplete="off"
           ng-pattern="assessmentsCtrl.REGEX.NUMERIC"
@@ -49,10 +49,8 @@
         </label><br>
         <button
           type="button"
-          ng-csv="assessmentsCtrl.getAssessmentList"
-          csv-header="getHeaders()"
-          class="btn btn-default"
-          filename="assessments.csv">
+          ng-click="assessmentsCtrl.changeSchema()"
+          class="btn btn-default">
             <span translate>assessments.populate_list</span>
         </button>
       </div>
