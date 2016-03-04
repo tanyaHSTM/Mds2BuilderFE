@@ -1,8 +1,7 @@
 <form name="optionsForm">
   <div class="row">
     <!--Number of Unique Residents -->
-    <div class="col-md-2">
-
+    <div class="col-md-4">
       <div
         class="form-group"
         ng-class="{'has-error':optionsForm.num_residents.$invalid && optionsForm.num_residents.$touched}">
@@ -16,6 +15,7 @@
           name="num_residents"
           type="text"
           class="form-control"
+          style="width:50%"
           ng-model="assessmentsCtrl.num_residents"
           autocomplete="off"
           ng-pattern="assessmentsCtrl.REGEX.NUMERIC"
@@ -28,8 +28,36 @@
             <div class="help-block" ng-message="pattern">{{'app.invalid_characters'|translate}}</div>
         </div>
       </div>
-
     </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label
+          class="control-label">
+            <span translate>assessments.assessment_types</span>
+        </label><br>
+        <label class="checkbox-inline"><input type="checkbox" value="">Admission</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Annual</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Quarterly</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Discharge</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label
+          class="control-label">
+            <span translate>assessments.assessment_types</span>
+        </label><br>
+        <button
+          type="button"
+          ng-csv="assessmentsCtrl.getAssessmentList"
+          csv-header="getHeaders()"
+          class="btn btn-default"
+          filename="assessments.csv">
+            <span translate>assessments.populate_list</span>
+        </button>
+      </div>
+    </div>
+    <!--<pre>{{assessmentsCtrl.model.Resident_identifier}}</pre>-->
 
   </div>
 </form>

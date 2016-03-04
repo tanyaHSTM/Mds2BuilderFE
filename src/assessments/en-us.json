@@ -7,5 +7,7 @@
   "ref_date":"Assessment Reference Date",
   "none_selected":"Choose assesments to add to list",
   "export_csv":"Export CSV",
-  "num_unique":"Number of unique residents"
+  "populate_list":"Populate List",
+  "num_unique":"Number of unique residents",
+  "assessment_types":"Choose assessment Types"
 }

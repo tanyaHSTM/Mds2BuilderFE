@@ -8,9 +8,6 @@ angular
     
     vm = @
     vm.REGEX = REGEX
-    
-    # Options
-    vm.num_residents = ""
       
     # Schema Form
     vm.schema =
@@ -705,6 +702,13 @@ angular
           validationMessage: "Format must be yyyymmdd"
 
     vm.model = {}
+
+    # Options
+    vm.num_residents = ""
+    vm.num_assessments = ""
+
+    vm.changeSchema = ->
+      vm.model.Resident_identifier = "1111111111"
     
     ### CSV ###
     vm.getHeaders = ->
