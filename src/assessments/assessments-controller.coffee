@@ -705,7 +705,6 @@ angular
 
     # Options
     vm.num_residents = ""
-    vm.num_assessments = ""
 
     vm.changeSchema = ->
       vm.model.Resident_identifier = "1111111111"
