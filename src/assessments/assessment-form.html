@@ -4,8 +4,8 @@
   <pvdm-header-actions>
     <button
       type="button"
-      ng-csv="assessmentsCtrl.getAssessmentList"
-      csv-header="getHeaders()"
+      ng-csv="assessmentsCtrl.getAssessmentList.records"
+      csv-header="assessmentsCtrl.getHeaders()"
       class="btn btn-primary"
       filename="assessments.csv">
         <span translate>assessments.export_csv</span>
@@ -13,8 +13,7 @@
     <button
       type="button"
       ng-click="assessmentsCtrl.addAssessment()"
-      class="btn btn-default"
-      filename="assessments.csv">
+      class="btn btn-default">
         <i pvdm-icon="circle-plus"></i>
         <span></span>
     </button>
@@ -43,7 +42,7 @@
       class="table table-striped table-hover">
     <thead>
       <tr>
-        <th>Index</th>
+        <!--<th>Index</th>-->
         <th pvdm-sort-column="'Master_no'"><span translate>assessments.master_no</span></th>
         <th pvdm-sort-column="'Resident_identifier'"><span translate>assessments.resident_identifier</span></th>
         <th pvdm-sort-column="'AA8'"><span translate>assessments.reason</span></th>
@@ -55,7 +54,7 @@
       <tr
         dir-paginate="assessment in assessmentsCtrl.assessments.records
         | itemsPerPage : 4 track by $index">
-        <td>{{assessmentsCtrl.assessments.records.indexOf(assessment)}}</td>
+        <!--<td>{{assessmentsCtrl.assessments.records.indexOf(assessment)}}</td>-->
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
         <td>{{assessment.AA8}}</td>
@@ -64,10 +63,10 @@
       </tr>
     </tbody>
   </table>
-  <pre>{{assessmentsCtrl.assessments|json}}</pre>
+
   <dir-pagination-controls></dir-pagination-controls>
 
-  <div ng-if="!assessmentsCtrl.assessments.length">
+  <div ng-if="!assessmentsCtrl.assessments.records.length">
     <div class="alert alert-info">
       <i style="display:inline" pvdm-icon="circle-info"></i>
       <span translate>assessments.none_selected</span>

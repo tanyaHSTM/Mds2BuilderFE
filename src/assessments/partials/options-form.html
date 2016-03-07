@@ -35,10 +35,14 @@
           class="control-label">
             <span translate>assessments.assessment_types</span>
         </label><br>
-        <label class="checkbox-inline"><input type="checkbox" value="">Admission</label>
-        <label class="checkbox-inline"><input type="checkbox" value="">Annual</label><br>
-        <label class="checkbox-inline" style="margin-right:8px"><input type="checkbox" value="">Quarterly</label>
-        <label class="checkbox-inline"><input type="checkbox" value="">Discharge</label>
+        <label class="checkbox-inline">
+          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.admission">Admission</label>
+        <label class="checkbox-inline">
+          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.annual">Annual</label><br>
+        <label class="checkbox-inline" style="margin-right:8px">
+          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.quarterly">Quarterly</label>
+        <label class="checkbox-inline">
+          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.discharge">Discharge</label>
       </div>
     </div>
     <div class="col-md-4">
@@ -49,13 +53,12 @@
         </label><br>
         <button
           type="button"
-          ng-click="assessmentsCtrl.changeSchema()"
+          ng-click="assessmentsCtrl.populateTable(assessmentsCtrl.num_residents)"
           class="btn btn-default">
             <span translate>assessments.populate_list</span>
         </button>
       </div>
     </div>
-    <!--<pre>{{assessmentsCtrl.model.Resident_identifier}}</pre>-->
 
   </div>
 </form>

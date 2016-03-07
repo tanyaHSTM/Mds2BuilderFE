@@ -49,8 +49,8 @@ angular
         AA9:
           type: 'string'
           title: '(AA9) Discharge Type'
-          enum: ['6', '7', '8']
-          default: '6'
+          enum: ['', '6', '7', '8']
+          default: ''
 
         AB1:
           type: 'string'
@@ -706,8 +706,38 @@ angular
     # Options
     vm.num_residents = ""
 
-    vm.changeSchema = ->
-      vm.model.Resident_identifier = "1111111111"
+    vm.assessmentType = 
+      admission : true
+      quarterly : false
+      annual : false
+      discharge : false
+
+    vm.populateTable = (unq_res) ->
+      n = 1
+      while n <= unq_res
+        resId = Math.random().toString().slice(2,12)
+        vm.model.Resident_identifier = resId
+        if vm.assessmentType.admission == true
+          vm.model.AA8 = "01"
+          vm.model.AA9 = ""
+          vm.model.AB1 = 20140101
+          vm.addAssessment()
+        if vm.assessmentType.quarterly == true
+          vm.model.AA8 = "05"
+          vm.model.AA9 = ""
+          vm.model.AB1 = 20140105
+          vm.addAssessment()
+        if vm.assessmentType.annual == true
+          vm.model.AA8 = "02"
+          vm.model.AA9 = ""
+          vm.model.AB1 = 20140110
+          vm.addAssessment()
+        if vm.assessmentType.discharge == true
+          vm.model.AA8 = "01"
+          vm.model.AA9 = "06"
+          vm.model.AB1 = 20140115
+          vm.addAssessment()
+        n++
     
     ### CSV ###
     vm.getHeaders = ->
