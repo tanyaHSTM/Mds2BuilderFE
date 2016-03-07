@@ -38,21 +38,24 @@
 <!--table-->
 <div class="table-responsive">
 
-  <table pvdm-sortable-table
-    class="table table-striped">
+    <table pvdm-sortable-table
+      collection="assessmentsCtrl.assessments"
+      class="table table-striped table-hover">
     <thead>
       <tr>
-        <th><span translate>assessments.master_no</span></th>
-        <th><span translate>assessments.resident_identifier</span></th>
-        <th><span translate>assessments.reason</span></th>
-        <th><span translate>assessments.admit_date</span></th>
-        <th><span translate>assessments.ref_date</span></th>
+        <th>Index</th>
+        <th pvdm-sort-column="'Master_no'"><span translate>assessments.master_no</span></th>
+        <th pvdm-sort-column="'Resident_identifier'"><span translate>assessments.resident_identifier</span></th>
+        <th pvdm-sort-column="'AA8'"><span translate>assessments.reason</span></th>
+        <th pvdm-sort-column="'AB1'"><span translate>assessments.admit_date</span></th>
+        <th pvdm-sort-column="'A3'"><span translate>assessments.ref_date</span></th>
       </tr>
     </thead>
     <tbody>
       <tr
-        dir-paginate="assessment in assessmentsCtrl.assessments.slice().reverse()
+        dir-paginate="assessment in assessmentsCtrl.assessments.records
         | itemsPerPage : 4 track by $index">
+        <td>{{assessmentsCtrl.assessments.records.indexOf(assessment)}}</td>
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
         <td>{{assessment.AA8}}</td>
@@ -61,6 +64,7 @@
       </tr>
     </tbody>
   </table>
+  <pre>{{assessmentsCtrl.assessments|json}}</pre>
   <dir-pagination-controls></dir-pagination-controls>
 
   <div ng-if="!assessmentsCtrl.assessments.length">

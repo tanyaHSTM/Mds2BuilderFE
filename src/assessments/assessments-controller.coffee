@@ -4,7 +4,7 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controllers.collection", ( $translate, REGEX) ->
+  .controller( "assessments.controllers.collection", ( $translate, REGEX, Collection) ->
     
     vm = @
     vm.REGEX = REGEX
@@ -716,12 +716,15 @@ angular
 
     # Populate assesssment table
     vm.assessments = []
+    vm.assessments = new Collection(vm.assessments, 'Resident_identifier', reverse=true)
 
     vm.addAssessment = ->
       vm.assessmentData = angular.copy(vm.model)
-      vm.assessments.push(vm.assessmentData)
+      vm.assessments.add(vm.assessmentData)
+
     # Csv download
     vm.getAssessmentList = vm.assessments
+
 
     return
   )
