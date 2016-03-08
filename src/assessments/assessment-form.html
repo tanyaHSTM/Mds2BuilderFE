@@ -1,39 +1,14 @@
 <!--Header-->
-<pvdm-page-header
-      ng-if="assessmentsCtrl.singlePage"
-      header="DQI MDS File Template">
-  <pvdm-header-actions>
-    <button
-      ng-if="assessmentsCtrl.singlePage"
-      type="button"
-      class="btn btn-default"
-      ng-click="assessmentsCtrl.viewBatch()">
-        <span translate>assessments.batch</span>
-    </button>
-  </pvdm-header-actions>
-</pvdm-page-header>
-<pvdm-page-header
-      ng-if="assessmentsCtrl.batch"
-      header="Batch Creation">
-  <pvdm-header-actions>
-    <button
-      ng-if="assessmentsCtrl.batch"
-      type="button"
-      class="btn btn-default"
-      ng-click="assessmentsCtrl.viewSinglePage()">
-        <span translate>assessments.single</span>
-    </button>
-  </pvdm-header-actions>
-</pvdm-page-header>
+<ng-include src="'header.html'"></ng-include>
 <!--Form-->
-  <ng-include
-     ng-if="assessmentsCtrl.singlePage"
-     src="'single-page.html'">
-  </ng-include>
-  <ng-include
-    ng-if="assessmentsCtrl.batch"
-    src="'batch.html'">
-  </ng-include>
+<ng-include
+  ng-if="assessmentsCtrl.singlePage"
+  src="'single-page.html'">
+</ng-include>
+<ng-include
+  ng-if="assessmentsCtrl.batch"
+  src="'batch.html'">
+</ng-include>
 <!--table-->
 <div class="table-responsive">
 

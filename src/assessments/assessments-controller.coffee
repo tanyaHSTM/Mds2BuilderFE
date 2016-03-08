@@ -50,19 +50,19 @@ angular
         AA7:
           type: 'string'
           title: '(AA7) Admission Type'
-          enum: ['0','9']
-          default: '0'
+          enum: ['01','09']
+          default: '01'
 
         AA8:
           type: 'string'
           title: '(AA8) Reason For Assessment'
-          enum: ['1', '2', '3', '4', '5', '10']
-          default: '3'
+          enum: ['01', '02', '03', '04', '05', '10']
+          default: '03'
 
         AA9:
           type: 'string'
           title: '(AA9) Discharge Type'
-          enum: ['', '6', '7', '8']
+          enum: ['', '06', '07', '08']
           default: ''
 
         AB1:
@@ -713,7 +713,232 @@ angular
           maxLength: 4
           pattern: REGEX.NUMERIC
           validationMessage: "Format must be yyyymmdd"
+    # Form
+    vm.form = [
 
+      'Master_no',
+      'Resident_identifier',
+      {
+        key: 'AA7'
+        type: 'select'
+        titleMap: [
+          {value: '01', name: '01 - Admission'},
+          {value: '09', name: '09 - Re-Entry'}
+      ]},
+      {
+        key: 'AA8'
+        type: 'select'
+        titleMap: [
+          {value: '01', name: '01 - Admission'},
+          {value: '02', name: '02 - Annual'},
+          {value: '03', name: '03 - Significant Change in Status'},
+          {value: '04', name: '04 - Significant Change of Prior Full Assessment'},
+          {value: '05', name: '05 - Quarterly Review Assessment'},
+          {value: '10', name: '10 - Significant Change of Prior Quarterly Assessment'}
+      ]},
+      {
+        key: 'AA9'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '06', name: '06 - Discharge—Return Not Anticipated'},
+          {value: '07', name: '07 - Discharge—Return Anticipated'},
+          {value: '08', name: '08 - Discharged Prior to Completing Initial Assessment'}
+      ]},
+      'AB1',
+      'A3',
+      {
+        key: 'B1'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Not comatose or semi-comatose'},
+          {value: '1', name: '1 - Comatose or in a persistent vegetative state'}
+      ]},
+      {
+        key: 'B2a'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No memory problem'},
+          {value: '1', name: '1 - Memory problem'}
+      ]},
+      {
+        key: 'B4'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Independent'},
+          {value: '1', name: '1 - Modified Independence'},
+          {value: '2', name: '2 - Moderately Impaired'},
+          {value: '3', name: '3 - Severely Impaired'}
+      ]},
+      {
+        key: 'C4'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Understood'},
+          {value: '1', name: '1 - Usually Understood'},
+          {value: '2', name: '2 - Sometimes Understood'},
+          {value: '3', name: '3 - Rarely or Never Understood'}
+      ]},
+      {
+        key: 'E1a'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1b'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1c'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1d'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1e'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1f'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1g'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1h'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1i'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1j'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1k'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1l'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1m'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1n'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1o'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E1p'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Indicator not exhibited in last 30 days'},
+          {value: '1', name: '1 - Indicator of this type exhibited up to five days a week'},
+          {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
+      ]},
+      {
+        key: 'E4aA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Behavioural symptom was not exhibited in last seven days'},
+          {value: '1', name: '1 - Behavioural symptom occurred 1 to 3 days, in last 7 days'},
+          {value: '3', name: '3 - Behavioural symptom occurred 4 to 6 days, but less than daily'},
+          {value: '4', name: '4 - Behavioural symptom occurred daily or more frequently'}
+      ]}
+    ]
+    # Model
     vm.model = {}
 
     # Options
