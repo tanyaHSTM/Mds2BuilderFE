@@ -8,7 +8,7 @@ angular
     
     vm = @
     vm.REGEX = REGEX
-
+    # Navigation
     vm.singlePage = true
     vm.batch = false
 
@@ -19,7 +19,9 @@ angular
     vm.viewSinglePage = ->
       vm.singlePage = true
       vm.batch = false
-    
+    # Table
+    vm.resetTable = ->
+      vm.assessments.clear()
     # Schema Form
     vm.schema =
       type: 'object'

@@ -15,5 +15,6 @@
   "admission":"Admission",
   "quarterly":"Quarterly",
   "annual":"Annual",
-  "discharge":"Discharge"  
+  "discharge":"Discharge",
+  "reset":"Reset"
 }
