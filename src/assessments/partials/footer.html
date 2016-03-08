@@ -1,0 +1,21 @@
+<div class="pvdm-trowser-footer">
+  <div class="form-group pvdm-trowser-primary-actions">
+    <button
+      type="button"
+      ng-csv="assessmentsCtrl.getAssessmentList.records"
+      csv-header="assessmentsCtrl.getHeaders()"
+      class="btn btn-primary"
+      filename="{{assessmentsCtrl.filename}}">
+        <span translate>assessments.export_csv</span>
+    </button>
+  </div>
+
+  <div class="form-group pvdm-trowser-primary-actions" 
+       style="padding-right:5px; width:275px;">
+    <input required
+      type="text"
+      placeholder="filename"
+      class="form-control"
+      ng-model="assessmentsCtrl.filename">
+  </div>
+</div>

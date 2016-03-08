@@ -1,0 +1,32 @@
+<div class="pvdm-trowser">
+
+  <div class="pvdm-trowser-page-header">
+    <div class="pvdm-trowser-title">{{trowser.header}}</div>
+    <div class="pvdm-trowser-header-actions">
+      <a ng-href="{{trowser.close}}"
+        pvdm-icon="remove-2"></a>
+    </div>
+  </div>
+
+  <div
+    class="pvdm-trowser-content-header"
+    ng-transclude="header">
+  </div>
+
+  <div
+    class="pvdm-trowser-body"
+    ng-transclude="body">
+  </div>
+
+  <div class="pvdm-trowser-footer">
+    <div
+      class="form-group pvdm-trowser-secondary-actions"
+      ng-transclude="secondary">
+    </div>
+    <div
+      class="form-group pvdm-trowser-primary-actions"
+      ng-transclude="primary">
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,78 @@
+@import './lib/stylesheets/pvdm-bootstrap/mixins';
+
+.pvdm-trowser-page-header {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background-color: #333;
+  }
+
+.pvdm-trowser-content-header {
+  padding: 0 30px;
+  }
+
+.pvdm-trowser-header-actions {
+  font-size: 24px;
+  line-height: 45px;
+  height: 45px;
+  position: absolute;
+  right: 20px;
+  a {
+    margin-left: 10px;
+    color: #EFEFEF;
+    font-size: 18px;
+    }
+  }
+
+.pvdm-trowser-title {
+  position: absolute;
+  color: #EFEFEF;
+  font-size: 22px;
+  line-height: 45px;
+  left: 20px;
+  font-weight: 200;
+  }
+
+.pvdm-trowser {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  padding-top:50px;
+ }
+
+.pvdm-trowser-body {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 20px 20px 65px 20px;
+  .pvdm-page-header {
+    margin: -20px -20px 0 -20px;
+    }
+  }
+
+.pvdm-trowser-footer {
+  @include clearfix;
+  position: fixed;
+  display: block;
+  padding: 15px 25px 0 30px;
+  bottom:0;
+  left: 0;
+  width:100%;
+  height:65px;
+  background-color:#333;
+  }
+
+.pvdm-trowser-primary-actions {
+  float: right;
+  }
+
+.pvdm-trowser-secondary-actions {
+  float: left;
+  }

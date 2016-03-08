@@ -1,0 +1,15 @@
+<div class="form-group">
+  <form
+    sf-schema="assessmentsCtrl.schema" 
+    sf-model="assessmentsCtrl.model">
+  </form>
+</div>
+
+<button
+  ng-if="assessmentsCtrl.singlePage"
+  type="button"
+  ng-click="assessmentsCtrl.addAssessment()"
+  class="btn btn-default">
+    <i pvdm-icon="circle-plus"></i>
+    <span>Add Assessment to List</span>
+</button>

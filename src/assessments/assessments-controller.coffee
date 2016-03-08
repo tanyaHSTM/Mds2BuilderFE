@@ -8,7 +8,18 @@ angular
     
     vm = @
     vm.REGEX = REGEX
-      
+
+    vm.singlePage = true
+    vm.batch = false
+
+    vm.viewBatch = ->
+      vm.singlePage = false
+      vm.batch = true
+
+    vm.viewSinglePage = ->
+      vm.singlePage = true
+      vm.batch = false
+    
     # Schema Form
     vm.schema =
       type: 'object'
@@ -740,6 +751,8 @@ angular
         n++
     
     ### CSV ###
+    vm.filename = "3333333333_CCIM_20160224.csv"
+    
     vm.getHeaders = ->
       for keyName of vm.model
         key = keyName

@@ -1,21 +1,19 @@
 <form name="optionsForm">
-  <div class="row">
     <!--Number of Unique Residents -->
-    <div class="col-md-4">
       <div
         class="form-group"
         ng-class="{'has-error':optionsForm.num_residents.$invalid && optionsForm.num_residents.$touched}">
         <label
           class="control-label"
           for="num-residents">
-            <span translate>assessments.num_unique</span>
+            <span translate>assessments.num_res</span>
         </label>
         <input required
           id="num-residents"
           name="num_residents"
           type="text"
           class="form-control"
-          style="width:40%"
+          style="width:10%"
           ng-model="assessmentsCtrl.num_residents"
           autocomplete="off"
           ng-pattern="assessmentsCtrl.REGEX.NUMERIC"
@@ -29,36 +27,43 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+
       <div class="form-group">
         <label
           class="control-label">
             <span translate>assessments.assessment_types</span>
         </label><br>
         <label class="checkbox-inline">
-          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.admission">Admission</label>
+          <input 
+            type="checkbox" 
+            ng-model="assessmentsCtrl.assessmentType.admission">
+              {{'assessments.admission'|translate}}</label>
         <label class="checkbox-inline">
-          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.annual">Annual</label><br>
+          <input 
+            type="checkbox" 
+            ng-model="assessmentsCtrl.assessmentType.annual">
+            {{'assessments.annual'|translate}}</label><br>
         <label class="checkbox-inline" style="margin-right:8px">
-          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.quarterly">Quarterly</label>
+          <input 
+            type="checkbox" 
+            ng-model="assessmentsCtrl.assessmentType.quarterly">
+            {{'assessments.quarterly'|translate}}</label>
         <label class="checkbox-inline">
-          <input type="checkbox" ng-model="assessmentsCtrl.assessmentType.discharge">Discharge</label>
+          <input 
+            type="checkbox" 
+            ng-model="assessmentsCtrl.assessmentType.discharge">
+            {{'assessments.discharge'|translate}}</label>
       </div>
     </div>
-    <div class="col-md-4">
+
       <div class="form-group">
-        <label
-          class="control-label">
-            <span translate>assessments.assessment_types</span>
-        </label><br>
         <button
           type="button"
           ng-click="assessmentsCtrl.populateTable(assessmentsCtrl.num_residents)"
           class="btn btn-default">
-            <span translate>assessments.populate_list</span>
+            <i pvdm-icon="circle-plus"></i>
+            <span translate>assessments.add_batch</span>
         </button>
-      </div>
-    </div>
 
   </div>
 </form>

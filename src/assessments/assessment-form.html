@@ -1,39 +1,39 @@
 <!--Header-->
-<pvdm-page-header header="DQI MDS File Template">
-
+<pvdm-page-header
+      ng-if="assessmentsCtrl.singlePage"
+      header="DQI MDS File Template">
   <pvdm-header-actions>
     <button
+      ng-if="assessmentsCtrl.singlePage"
       type="button"
-      ng-csv="assessmentsCtrl.getAssessmentList.records"
-      csv-header="assessmentsCtrl.getHeaders()"
-      class="btn btn-primary"
-      filename="assessments.csv">
-        <span translate>assessments.export_csv</span>
-    </button>
-    <button
-      type="button"
-      ng-click="assessmentsCtrl.addAssessment()"
-      class="btn btn-default">
-        <i pvdm-icon="circle-plus"></i>
-        <span></span>
+      class="btn btn-default"
+      ng-click="assessmentsCtrl.viewBatch()">
+        <span translate>assessments.batch</span>
     </button>
   </pvdm-header-actions>
-
-  <pvdm-stage
-    active="true"
-    class="pvdm-record-detail-stage">
-
-    <ng-include src="'options-form.html'"></ng-include>
-
-  </pvdm-stage>
+</pvdm-page-header>
+<pvdm-page-header
+      ng-if="assessmentsCtrl.batch"
+      header="Batch Creation">
+  <pvdm-header-actions>
+    <button
+      ng-if="assessmentsCtrl.batch"
+      type="button"
+      class="btn btn-default"
+      ng-click="assessmentsCtrl.viewSinglePage()">
+        <span translate>assessments.single</span>
+    </button>
+  </pvdm-header-actions>
 </pvdm-page-header>
 <!--Form-->
-<div class="form-group">
-  <form
-    sf-schema="assessmentsCtrl.schema" 
-    sf-model="assessmentsCtrl.model">
-  </form>
-</div>
+  <ng-include
+     ng-if="assessmentsCtrl.singlePage"
+     src="'single-page.html'">
+  </ng-include>
+  <ng-include
+    ng-if="assessmentsCtrl.batch"
+    src="'batch.html'">
+  </ng-include>
 <!--table-->
 <div class="table-responsive">
 
@@ -73,3 +73,5 @@
     </div>
   </div>
 </div>
+<!--footer-->
+<ng-include src="'footer.html'"></ng-include>
