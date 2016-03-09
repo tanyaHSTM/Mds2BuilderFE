@@ -16,9 +16,8 @@ angular
       day = if day.length > 1 then day else '0' + day
       year + '' + month + '' + day
 
-    subtract: (days) ->
-      date = new Date(@valueOf())
-      date.setDate date.getDate() + days
+    subtractHours: (date, hours) ->
+      date = new Date(date.getTime() - (hours*60*60*1000))
       date
 
   )

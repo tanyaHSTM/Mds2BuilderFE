@@ -21,11 +21,11 @@ angular
     vm.batch = false
     # Dates
     today = new Date()
-    tenDaysAgo = new Date(today.getTime() - (240*60*60*1000))
-    fifteenDaysAgo = new Date(today.getTime() - (360*60*60*1000))
-    twentyDaysAgo = new Date(today.getTime() - (480*60*60*1000))
-    twentyFiveDaysAgo = new Date(today.getTime() - (600*60*60*1000))
-    thirtyDaysAgo = new Date(today.getTime() - (720*60*60*1000))
+    tenDaysAgo = DateConstructor.subtractHours(today, 240)
+    fifteenDaysAgo = DateConstructor.subtractHours(today, 360)
+    twentyDaysAgo = DateConstructor.subtractHours(today, 480)
+    twentyFiveDaysAgo = DateConstructor.subtractHours(today, 600)
+    thirtyDaysAgo = DateConstructor.subtractHours(today, 720)
 
     vm.viewBatch = ->
       vm.singlePage = false
