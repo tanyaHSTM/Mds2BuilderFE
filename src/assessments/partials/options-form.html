@@ -1,0 +1,61 @@
+<form name="optionsForm">
+  <div class="row">
+    <!--Number of Residents -->
+    <div class="col-md-4">
+      <div
+        class="form-group"
+        ng-class="{'has-error':optionsForm.num_residents.$invalid && optionsForm.num_residents.$touched}">
+        <label
+          class="control-label"
+          for="num-residents">
+            <span translate>assessments.num_unique</span>
+        </label>
+        <input required
+          id="num-residents"
+          name="num_residents"
+          type="text"
+          class="form-control"
+          style="width:40%"
+          ng-model="assessmentsCtrl.num_residents"
+          autocomplete="off"
+          ng-pattern="assessmentsCtrl.REGEX.NUMERIC"
+          maxlength="4">
+        <div
+          class="messages"
+          ng-messages="optionsForm.num_residents.$error"
+          ng-if="optionsForm.num_residents.$touched">
+            <div class="help-block" ng-message="required">{{'app.required_field'|translate}}</div>
+            <div class="help-block" ng-message="pattern">{{'app.invalid_characters'|translate}}</div>
+        </div>
+      </div>
+    </div>
+    <!-- Assessment Types -->
+    <div class="col-md-4">
+      <div class="form-group">
+        <label
+          class="control-label">
+            <span translate>assessments.assessment_types</span>
+        </label><br>
+        <label class="checkbox-inline"><input type="checkbox" value="">Admission</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Annual</label><br>
+        <label class="checkbox-inline" style="margin-right:8px"><input type="checkbox" value="">Quarterly</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">Discharge</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label
+          class="control-label">
+            <span translate>assessments.assessment_types</span>
+        </label><br>
+        <button
+          type="button"
+          ng-click="assessmentsCtrl.changeSchema()"
+          class="btn btn-default">
+            <span translate>assessments.populate_list</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</form>

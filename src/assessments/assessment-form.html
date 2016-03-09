@@ -17,7 +17,6 @@
       class="table table-striped table-hover">
     <thead>
       <tr>
-        <!--<th>Index</th>-->
         <th pvdm-sort-column="'Master_no'"><span translate>assessments.master_no</span></th>
         <th pvdm-sort-column="'Resident_identifier'"><span translate>assessments.resident_identifier</span></th>
         <th pvdm-sort-column="'AA8'"><span translate>assessments.reason</span></th>
@@ -27,9 +26,9 @@
     </thead>
     <tbody>
       <tr
+        ng-click="assessmentsCtrl.setAsssessment(assessmentsCtrl.assessments.records.indexOf(assessment))"
         dir-paginate="assessment in assessmentsCtrl.assessments.records
         | itemsPerPage : 5 track by $index">
-        <!--<td>{{assessmentsCtrl.assessments.records.indexOf(assessment)}}</td>-->
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
         <td>{{assessment.AA8}}</td>
@@ -39,14 +38,15 @@
     </tbody>
   </table>
 
-  <dir-pagination-controls></dir-pagination-controls>
-
   <div ng-if="!assessmentsCtrl.assessments.records.length">
     <div class="alert alert-info">
       <i style="display:inline" pvdm-icon="circle-info"></i>
       <span translate>assessments.none_selected</span>
     </div>
   </div>
+
+  <dir-pagination-controls></dir-pagination-controls>
+
 </div>
 <!--footer-->
 <ng-include src="'footer.html'"></ng-include>
