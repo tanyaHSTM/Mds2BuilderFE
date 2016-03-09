@@ -4,7 +4,7 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controllers.collection", ( $translate, REGEX, Collection) ->
+  .controller( "assessments.controllers.collection", ( $translate, REGEX, Collection, DateConstructor) ->
     
     vm = @
     vm.REGEX = REGEX
@@ -19,6 +19,13 @@ angular
     # Navigation
     vm.singlePage = true
     vm.batch = false
+    # Dates
+    today = new Date()
+    tenDaysAgo = new Date(today.getTime() - (240*60*60*1000))
+    fifteenDaysAgo = new Date(today.getTime() - (360*60*60*1000))
+    twentyDaysAgo = new Date(today.getTime() - (480*60*60*1000))
+    twentyFiveDaysAgo = new Date(today.getTime() - (600*60*60*1000))
+    thirtyDaysAgo = new Date(today.getTime() - (720*60*60*1000))
 
     vm.viewBatch = ->
       vm.singlePage = false
@@ -52,22 +59,22 @@ angular
         if vm.assessmentType.admission == true
           vm.model.AA8 = "01"
           vm.model.AA9 = ""
-          vm.model.AB1 = 20140101
+          vm.model.AB1 = DateConstructor.format(tenDaysAgo)
           vm.addAssessment()
         if vm.assessmentType.quarterly == true
           vm.model.AA8 = "05"
           vm.model.AA9 = ""
-          vm.model.AB1 = 20140105
+          vm.model.AB1 = DateConstructor.format(fifteenDaysAgo)
           vm.addAssessment()
         if vm.assessmentType.annual == true
           vm.model.AA8 = "02"
           vm.model.AA9 = ""
-          vm.model.AB1 = 20140110
+          vm.model.AB1 = DateConstructor.format(twentyDaysAgo)
           vm.addAssessment()
         if vm.assessmentType.discharge == true
           vm.model.AA8 = "01"
           vm.model.AA9 = "06"
-          vm.model.AB1 = 20140115
+          vm.model.AB1 = DateConstructor.format(twentyFiveDaysAgo)
           vm.addAssessment()
         n++
     
@@ -126,7 +133,7 @@ angular
         AB1:
           type: 'string'
           title: '(AB1) Admission/Re-entry date'
-          default: "20140101"
+          default: DateConstructor.format(tenDaysAgo)
           required: true
           minLength: 8
           maxLength: 8
@@ -136,7 +143,7 @@ angular
         A3:
           type: 'string'
           title: '(A3) Assessment Reference Date'
-          default: "20150202"
+          default: DateConstructor.format(tenDaysAgo)
           required: true
           minLength: 8
           maxLength: 8
@@ -770,7 +777,7 @@ angular
           minLength: 0
           maxLength: 4
           pattern: REGEX.NUMERIC
-          validationMessage: "Format must be yyyymmdd"
+          validationMessage: "Format must be yyyy"
     # Form
     vm.form = [
 
