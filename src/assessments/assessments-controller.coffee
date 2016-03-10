@@ -4,7 +4,7 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controllers.collection", ( $translate, REGEX, Collection, DateConstructor) ->
+  .controller( "assessments.controllers.collection", ( $translate, $filter, REGEX, Collection, DateConstructor) ->
     
     vm = @
     vm.REGEX = REGEX
@@ -18,14 +18,7 @@ angular
       vm.assessments.add(vm.assessmentData)
     # Navigation
     vm.singlePage = true
-    vm.batch = false
-    # Dates
-    today = new Date()
-    tenDaysAgo = DateConstructor.subtractHours(today, 240)
-    fifteenDaysAgo = DateConstructor.subtractHours(today, 360)
-    twentyDaysAgo = DateConstructor.subtractHours(today, 480)
-    twentyFiveDaysAgo = DateConstructor.subtractHours(today, 600)
-    thirtyDaysAgo = DateConstructor.subtractHours(today, 720)
+    vm.batch = false  
 
     vm.viewBatch = ->
       vm.singlePage = false
@@ -59,22 +52,22 @@ angular
         if vm.assessmentType.admission == true
           vm.model.AA8 = "01"
           vm.model.AA9 = ""
-          vm.model.AB1 = DateConstructor.format(tenDaysAgo)
+          vm.model.AB1 = $filter('daysAgoFormatted')(10)
           vm.addAssessment()
         if vm.assessmentType.quarterly == true
           vm.model.AA8 = "05"
           vm.model.AA9 = ""
-          vm.model.AB1 = DateConstructor.format(fifteenDaysAgo)
+          vm.model.AB1 = $filter('daysAgoFormatted')(15)
           vm.addAssessment()
         if vm.assessmentType.annual == true
           vm.model.AA8 = "02"
           vm.model.AA9 = ""
-          vm.model.AB1 = DateConstructor.format(twentyDaysAgo)
+          vm.model.AB1 = $filter('daysAgoFormatted')(20)
           vm.addAssessment()
         if vm.assessmentType.discharge == true
           vm.model.AA8 = "01"
           vm.model.AA9 = "06"
-          vm.model.AB1 = DateConstructor.format(twentyFiveDaysAgo)
+          vm.model.AB1 = $filter('daysAgoFormatted')(25)
           vm.addAssessment()
         n++
     
@@ -133,7 +126,7 @@ angular
         AB1:
           type: 'string'
           title: '(AB1) Admission/Re-entry date'
-          default: DateConstructor.format(tenDaysAgo)
+          default: $filter('daysAgoFormatted')(10)
           required: true
           minLength: 8
           maxLength: 8
@@ -143,7 +136,7 @@ angular
         A3:
           type: 'string'
           title: '(A3) Assessment Reference Date'
-          default: DateConstructor.format(tenDaysAgo)
+          default: $filter('daysAgoFormatted')(10)
           required: true
           minLength: 8
           maxLength: 8
