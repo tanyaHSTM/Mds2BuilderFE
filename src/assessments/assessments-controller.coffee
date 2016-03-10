@@ -4,12 +4,12 @@ angular
 
   .module( "pvdm.assessments" )
 
-  .controller( "assessments.controllers.collection", ( $filter, Collection, schemaBuilder, formBuilder) ->
+  .controller( "assessments.controllers.collection", ( $filter, Collection, SchemaBuilder, ASSESSMENT_TYPE) ->
     
     vm = @
-    vm.schema = schemaBuilder
-    vm.form = formBuilder
-    vm.model = {}
+    vm.schema = SchemaBuilder.schema
+    vm.form = SchemaBuilder.form
+    vm.model = SchemaBuilder.model
     # Assessments
     vm.assessments = []
     vm.assessments = new Collection(vm.assessments, 'Resident_identifier', reverse=true)
@@ -51,24 +51,16 @@ angular
         resId = Math.random().toString().slice(2,12)
         vm.model.Resident_identifier = resId
         if vm.assessmentType.admission == true
-          vm.model.AA8 = "01"
-          vm.model.AA9 = ""
-          vm.model.AB1 = $filter('daysAgoFormatted')(10)
+          $filter('assessmentType')(vm.model, ASSESSMENT_TYPE.ADMISSION)
           vm.addAssessment()
         if vm.assessmentType.quarterly == true
-          vm.model.AA8 = "05"
-          vm.model.AA9 = ""
-          vm.model.AB1 = $filter('daysAgoFormatted')(15)
+          $filter('assessmentType')(vm.model, ASSESSMENT_TYPE.QUARTERLY)
           vm.addAssessment()
         if vm.assessmentType.annual == true
-          vm.model.AA8 = "02"
-          vm.model.AA9 = ""
-          vm.model.AB1 = $filter('daysAgoFormatted')(20)
+          $filter('assessmentType')(vm.model, ASSESSMENT_TYPE.ANNUAL)
           vm.addAssessment()
         if vm.assessmentType.discharge == true
-          vm.model.AA8 = "01"
-          vm.model.AA9 = "06"
-          vm.model.AB1 = $filter('daysAgoFormatted')(25)
+          $filter('assessmentType')(vm.model, ASSESSMENT_TYPE.DISCHARGE)
           vm.addAssessment()
         n++
     
