@@ -2,4 +2,6 @@
 
 angular
 
-  .module( "pvdm.assessments", [])
+  .module( "pvdm.assessments", [
+  	'pvdm.assessments.dqi'
+  ])

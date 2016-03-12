@@ -17,7 +17,7 @@ angular
 
   .constant( "PATHS", Object.defineProperties( {},
     "START_PAGE":
-      value: "/assessment_form"
+      value: "/assessments/dqi_form"
     "LOCALES":
       value: "/locales"
   ))

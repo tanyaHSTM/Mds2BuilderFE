@@ -2,14 +2,14 @@
 
 angular
 
-  .module( "pvdm.assessments" )
+  .module( "pvdm.assessments.dqi" )
 
-  .controller( "assessments.controllers.collection", ( $filter, Collection, SchemaBuilder, ASSESSMENT_TYPE) ->
+  .controller( "dqi.controllers.collection", ( $filter, Collection, DqiSchema, ASSESSMENT_TYPE) ->
     
     vm = @
-    vm.schema = SchemaBuilder.schema
-    vm.form = SchemaBuilder.form
-    vm.model = SchemaBuilder.model
+    vm.schema = DqiSchema.schema
+    vm.form = DqiSchema.form
+    vm.model = DqiSchema.model
     # Assessments
     vm.assessments = []
     vm.assessments = new Collection(vm.assessments, 'Resident_identifier', reverse=true)

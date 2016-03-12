@@ -1,20 +1,9 @@
-<!--Header-->
-<ng-include src="'header.html'"></ng-include>
-<!--Form-->
-<ng-include
-  ng-if="assessmentsCtrl.singlePage"
-  src="'single-page.html'">
-</ng-include>
-<ng-include
-  ng-if="assessmentsCtrl.batch"
-  src="'batch.html'">
-</ng-include>
 <!--Table-->
 <div class="table-responsive">
 
-    <table pvdm-sortable-table
-      collection="assessmentsCtrl.assessments"
-      class="table table-striped table-hover">
+  <table pvdm-sortable-table
+    collection="dqiCtrl.assessments"
+    class="table table-striped table-hover">
     <thead>
       <tr>
         <th pvdm-sort-column="'Master_no'"><span translate>assessments.master_no</span></th>
@@ -26,8 +15,8 @@
     </thead>
     <tbody>
       <tr
-        ng-click="assessmentsCtrl.setAsssessment(assessmentsCtrl.assessments.records.indexOf(assessment))"
-        dir-paginate="assessment in assessmentsCtrl.assessments.records
+        ng-click="dqiCtrl.setAsssessment(dqiCtrl.assessments.records.indexOf(assessment))"
+        dir-paginate="assessment in dqiCtrl.assessments.records
         | itemsPerPage : 5 track by $index">
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
@@ -38,7 +27,7 @@
     </tbody>
   </table>
   
-  <div ng-if="!assessmentsCtrl.assessments.records.length">
+  <div ng-if="!dqiCtrl.assessments.records.length">
     <div class="alert alert-info">
       <i style="display:inline" pvdm-icon="circle-info"></i>
       <span translate>assessments.none_selected</span>
@@ -48,5 +37,3 @@
   <dir-pagination-controls></dir-pagination-controls>
 
 </div>
-<!--footer-->
-<ng-include src="'footer.html'"></ng-include>

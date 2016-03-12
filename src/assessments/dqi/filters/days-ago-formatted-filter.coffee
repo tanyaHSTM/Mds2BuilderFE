@@ -6,7 +6,7 @@
 
 angular
 
-  .module( "pvdm.assessments" )
+  .module( "pvdm.assessments.dqi" )
 
   .filter("daysAgoFormatted", ($filter) ->
     (days) ->

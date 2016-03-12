@@ -2,7 +2,7 @@
   <div class="form-group pvdm-trowser-secondary-actions">
     <button
       type="button"
-      ng-click="assessmentsCtrl.resetTable()"
+      ng-click="dqiCtrl.resetTable()"
       class="btn btn-danger">
         <span translate>assessments.reset</span>
     </button>
@@ -11,10 +11,10 @@
   <div class="form-group pvdm-trowser-primary-actions">
     <button
       type="button"
-      ng-csv="assessmentsCtrl.getAssessmentList.records"
-      csv-header="assessmentsCtrl.getHeaders()"
+      ng-csv="dqiCtrl.getAssessmentList.records"
+      csv-header="dqiCtrl.getHeaders()"
       class="btn btn-primary"
-      filename="{{assessmentsCtrl.filename}}">
+      filename="{{dqiCtrl.filename}}">
         <span translate>assessments.export_csv</span>
     </button>
   </div>
@@ -25,6 +25,6 @@
       type="text"
       placeholder="filename"
       class="form-control"
-      ng-model="assessmentsCtrl.filename">
+      ng-model="dqiCtrl.filename">
   </div>
 </div>

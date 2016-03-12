@@ -7,7 +7,7 @@
 
 angular
 
-  .module( 'pvdm.assessments' )
+  .module( 'pvdm.assessments.dqi' )
 
   .filter( 'assessmentType', ( $filter, ASSESSMENT_TYPE )->
     (model, type) ->

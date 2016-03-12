@@ -4,7 +4,7 @@ angular
 
   .module( "pvdm.services" )
 
-  .factory("SchemaBuilder", ($translate, $filter, REGEX) ->
+  .factory("DqiSchema", ($translate, $filter, REGEX) ->
 
     schemaForm = {}
 

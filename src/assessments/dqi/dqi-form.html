@@ -1,0 +1,15 @@
+<!--Header-->
+<ng-include src="'header.html'"></ng-include>
+<!--Form-->
+<ng-include
+  ng-if="dqiCtrl.singlePage"
+  src="'single-page.html'">
+</ng-include>
+<ng-include
+  ng-if="dqiCtrl.batch"
+  src="'batch.html'">
+</ng-include>
+<!--Table-->
+<ng-include src="'table.html'"></ng-include>
+<!--Footer-->
+<ng-include src="'footer.html'"></ng-include>

@@ -1,0 +1,16 @@
+<div class="form-group">
+  <form
+    sf-schema="dqiCtrl.schema"
+    sf-form="dqiCtrl.form"
+    sf-model="dqiCtrl.model">
+  </form>
+</div>
+
+<button
+  ng-if="dqiCtrl.singlePage"
+  type="button"
+  ng-click="dqiCtrl.addAssessment()"
+  class="btn btn-default">
+    <i pvdm-icon="circle-plus"></i>
+    <span>Add Assessment to List</span>
+</button>

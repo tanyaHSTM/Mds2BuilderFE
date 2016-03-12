@@ -16,9 +16,9 @@
           type="text"
           class="form-control"
           style="width:40%"
-          ng-model="assessmentsCtrl.num_residents"
+          ng-model="dqiCtrl.num_residents"
           autocomplete="off"
-          ng-pattern="assessmentsCtrl.REGEX.NUMERIC"
+          ng-pattern="dqiCtrl.REGEX.NUMERIC"
           maxlength="4">
         <div
           class="messages"
@@ -50,7 +50,7 @@
         </label><br>
         <button
           type="button"
-          ng-click="assessmentsCtrl.changeSchema()"
+          ng-click="dqiCtrl.changeSchema()"
           class="btn btn-default">
             <span translate>assessments.populate_list</span>
         </button>
