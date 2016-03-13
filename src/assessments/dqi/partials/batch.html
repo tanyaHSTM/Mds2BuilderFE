@@ -1,5 +1,5 @@
 <form name="batchForm">
-  <!--Number of Unique Residents -->
+  <!--Number of Residents -->
   <div
     class="form-group"
     ng-class="{'has-error':batchForm.num_residents.$invalid && batchForm.num_residents.$touched}">
@@ -26,7 +26,7 @@
         <div class="help-block" ng-message="pattern">{{'app.invalid_characters'|translate}}</div>
     </div>
   </div>
-
+  <!--Assessment Types -->
   <div class="form-group">
     <label
       class="control-label">
