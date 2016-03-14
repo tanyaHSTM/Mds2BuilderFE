@@ -24,7 +24,7 @@ angular
     vm.setAsssessment = (assessmentId) ->
       vm.assessmentId = assessmentId
       vm.model = vm.assessments.records[vm.assessmentId]
-
+      
     # Batch
     vm.num_residents = "1"
 

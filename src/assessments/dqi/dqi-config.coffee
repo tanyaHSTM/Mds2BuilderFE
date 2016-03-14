@@ -27,5 +27,8 @@ angular
         url: '/batch',
         templateUrl: 'batch.html'
     )
-
+    .state('dqi.records',
+        url: '/records',
+        templateUrl: 'records.html'
+    )
   )

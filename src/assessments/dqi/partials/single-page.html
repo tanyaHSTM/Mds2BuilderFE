@@ -1,15 +1,27 @@
 <div class="form-group">
+  <h1>Admission Asssessment
+    <span class="pull-right control-group">
+      <button
+        type="button"
+        ng-click="dqiCtrl.addAssessment()"
+        class="btn btn-default">
+          <i pvdm-icon="circle-plus"></i>
+          <span>Add Record</span>
+      </button>
+    </span>
+  </h1>
   <form
     sf-schema="dqiCtrl.schema"
     sf-form="dqiCtrl.form"
     sf-model="dqiCtrl.model">
   </form>
+  <span class="pull-right control-group">
+    <button
+      type="button"
+      ng-click="dqiCtrl.addAssessment()"
+      class="btn btn-default">
+        <i pvdm-icon="circle-plus"></i>
+        <span>Add Record</span>
+    </button>
+  </span>
 </div>
-
-<button
-  type="button"
-  ng-click="dqiCtrl.addAssessment()"
-  class="btn btn-default">
-    <i pvdm-icon="circle-plus"></i>
-    <span>Add Assessment to List</span>
-</button>

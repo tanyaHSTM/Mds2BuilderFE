@@ -5,7 +5,7 @@
   "reason":"Reason For Assessment",
   "admit_date":"Admission/Re-entry date",
   "ref_date":"Assessment Reference Date",
-  "none_selected":"Choose assesments to add to list",
+  "none_selected":"Create assesments to add to list",
   "export_csv":"Export CSV",
   "add_batch":"Add Batch to List",
   "num_res":"Number of residents",

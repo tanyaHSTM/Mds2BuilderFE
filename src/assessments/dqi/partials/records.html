@@ -1,6 +1,4 @@
-<!--Table-->
 <div class="table-responsive">
-
   <table pvdm-sortable-table
     collection="dqiCtrl.assessments"
     class="table table-striped table-hover">
@@ -15,9 +13,10 @@
     </thead>
     <tbody>
       <tr
+        pvdm-link-row="/dqi/form"
         ng-click="dqiCtrl.setAsssessment(dqiCtrl.assessments.records.indexOf(assessment))"
         dir-paginate="assessment in dqiCtrl.assessments.records
-        | itemsPerPage : 5 track by $index">
+        | itemsPerPage : 10 track by $index">
         <td>{{assessment.Master_no}}</td>
         <td>{{assessment.Resident_identifier}}</td>
         <td>{{assessment.AA8}}</td>
@@ -35,5 +34,12 @@
   </div>
 
   <dir-pagination-controls></dir-pagination-controls>
+
+  <button
+    type="button"
+    ng-click="dqiCtrl.resetTable()"
+    class="btn btn-danger">
+      <span translate>Clear Records</span>
+  </button>
 
 </div>
