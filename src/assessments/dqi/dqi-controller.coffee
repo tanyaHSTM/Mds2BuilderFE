@@ -4,9 +4,11 @@ angular
 
   .module( "pvdm.assessments.dqi" )
 
-  .controller( "dqi.controllers.collection", ( $filter, Collection, DqiSchema, ASSESSMENT_TYPE) ->
+  .controller( "dqi.controllers.collection", ( $state, $filter, Collection, DqiSchema, ASSESSMENT_TYPE) ->
     
     vm = @
+    vm.state = $state
+
     vm.schema = DqiSchema.schema
     vm.form = DqiSchema.form
     vm.model = DqiSchema.model
@@ -24,7 +26,7 @@ angular
     vm.setAsssessment = (assessmentId) ->
       vm.assessmentId = assessmentId
       vm.model = vm.assessments.records[vm.assessmentId]
-      
+
     # Batch
     vm.num_residents = "1"
 

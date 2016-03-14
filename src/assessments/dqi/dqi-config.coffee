@@ -18,9 +18,9 @@ angular
         controller: 'dqi.controllers.collection as dqiCtrl'
       )
 
-    .state('dqi.form', 
-        url: '/form',
-        templateUrl: 'single-page.html',
+    .state('dqi.single', 
+        url: '/single',
+        templateUrl: 'single.html',
     )
 
     .state('dqi.batch',

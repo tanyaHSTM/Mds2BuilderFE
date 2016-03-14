@@ -23,11 +23,21 @@
 
   </pvdm-header-actions>
 </pvdm-page-header>
+<pre>{{dqiCtrl.$state}}</pre>
 
 <ul class="nav nav-tabs">
-  <li><a href="#/dqi/form">Form</a></li>
-  <li><a href="#/dqi/batch">Batch</a></li>
-  <li><a href="#/dqi/records">Records <span class="badge">{{dqiCtrl.assessments.records.length}}</span></a></li>
+  <li
+    ng-class="{active:dqiCtrl.state.includes('dqi.single')}">
+    <a href="#/dqi/single">Single</a>
+  </li>
+  <li
+    ng-class="{active:dqiCtrl.state.includes('dqi.batch')}">
+    <a href="#/dqi/batch">Batch</a>
+  </li>
+  <li
+    ng-class="{active:dqiCtrl.state.includes('dqi.records')}">
+    <a href="#/dqi/records">Records <span class="badge">{{dqiCtrl.assessments.records.length}}</span></a>
+  </li>
 </ul>
 <!--Form-->
 <div ui-view></div>
