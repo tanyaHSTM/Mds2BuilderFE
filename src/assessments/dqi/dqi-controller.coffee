@@ -17,17 +17,6 @@ angular
     vm.addAssessment = ->
       vm.assessmentData = angular.copy(vm.model)
       vm.assessments.add(vm.assessmentData)
-    # Navigation
-    vm.singlePage = true
-    vm.batch = false  
-
-    vm.viewBatch = ->
-      vm.singlePage = false
-      vm.batch = true
-
-    vm.viewSinglePage = ->
-      vm.singlePage = true
-      vm.batch = false
     # Table
     vm.resetTable = ->
       vm.assessments.clear()

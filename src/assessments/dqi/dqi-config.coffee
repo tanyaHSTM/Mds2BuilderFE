@@ -11,10 +11,21 @@ angular
       .when("/", PATHS.START_PAGE)
 
     $stateProvider
-      .state('assessments:dqi',
+      .state('dqi',
         parent: 'layout:primary'
-        url: '/assessments/dqi_form'
+        url: '/dqi'
         templateUrl: 'dqi-form.html'
         controller: 'dqi.controllers.collection as dqiCtrl'
       )
+
+    .state('dqi.form', 
+        url: '/form',
+        templateUrl: 'single-page.html',
+    )
+
+    .state('dqi.batch',
+        url: '/batch',
+        templateUrl: 'batch.html'
+    )
+
   )
