@@ -12,19 +12,33 @@
 
         <li>
           <a translate
-            href="#"
             class="pvdm-ocn-link"
-            ng-click="sidebar.closeNav()">
-              Admission Assessment
+            ng-click="sidebar.setAdmission()">
+              assessments.admission_assessment
           </a>
         </li>
         
         <li>
           <a translate
-            href="#"
             class="pvdm-ocn-link"
-            ng-click="sidebar.closeNav()">
-              Quarterly Assessment
+            ng-click="sidebar.setQuarterly()">
+              assessments.quarterly_assessment
+          </a>
+        </li>
+
+        <li>
+          <a translate
+            class="pvdm-ocn-link"
+            ng-click="sidebar.setAnnual()">
+              assessments.annual_assessment
+          </a>
+        </li>
+
+        <li>
+          <a translate
+            class="pvdm-ocn-link"
+            ng-click="sidebar.setDischarge()">
+              assessments.discharge_assessment
           </a>
         </li>
 
