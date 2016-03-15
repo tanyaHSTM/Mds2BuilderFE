@@ -1,4 +1,11 @@
 "assessments":{
+  "admission_assessment":"Admission Assessment",
+  "quarterly_assessment":"Quarterly Assessment",
+  "annual_assessment":"Annual Assessment",
+  "discharge_assessment":"Discharge Assessment",
+  "single":"Single",
+  "batch":"Batch",
+  "records":"Records",
   "resident_generator":"Resident Generator",
   "master_no":"Master Number",
   "resident_identifier":"Resident Identifier",
@@ -16,5 +23,6 @@
   "quarterly":"Quarterly",
   "annual":"Annual",
   "discharge":"Discharge",
-  "reset":"Reset"
+  "add_record":"Add Record",
+  "clear":"Clear Records"
 }

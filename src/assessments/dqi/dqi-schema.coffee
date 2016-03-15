@@ -701,8 +701,8 @@ angular
 
     schemaForm.form = [
 
-      'Master_no',
-      'Resident_identifier',
+      "Master_no",
+      "Resident_identifier",
       {
         key: 'AA7'
         type: 'select'

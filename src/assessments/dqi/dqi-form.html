@@ -16,27 +16,26 @@
           ng-csv="dqiCtrl.getAssessmentList.records"
           csv-header="dqiCtrl.getHeaders()"
           class="btn btn-primary"
-          filename="{{dqiCtrl.filename}}">Export CSV
+          filename="{{dqiCtrl.filename}}">{{'assessments.export_csv'|translate}}
         </button>
       </div>
     </div>
 
   </pvdm-header-actions>
 </pvdm-page-header>
-<pre>{{dqiCtrl.$state}}</pre>
 
 <ul class="nav nav-tabs">
   <li
     ng-class="{active:dqiCtrl.state.includes('dqi.single')}">
-    <a href="#/dqi/single">Single</a>
+    <a href="#/dqi/single" translate>assessments.single</a>
   </li>
   <li
     ng-class="{active:dqiCtrl.state.includes('dqi.batch')}">
-    <a href="#/dqi/batch">Batch</a>
+    <a href="#/dqi/batch" translate>assessments.batch</a>
   </li>
   <li
     ng-class="{active:dqiCtrl.state.includes('dqi.records')}">
-    <a href="#/dqi/records">Records <span class="badge">{{dqiCtrl.assessments.records.length}}</span></a>
+    <a href="#/dqi/records">{{'assessments.records'|translate}} <span class="badge">{{dqiCtrl.assessments.records.length}}</span></a>
   </li>
 </ul>
 <!--Form-->
