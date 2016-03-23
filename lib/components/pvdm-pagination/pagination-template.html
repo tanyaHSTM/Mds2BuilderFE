@@ -1,0 +1,21 @@
+<span
+  pvdm-icon="chevron-left"
+  class="text-muted"
+  ng-show="pagination.current == 1"></span>
+
+<a href
+  pvdm-icon="chevron-left"
+  ng-click="setCurrent(pagination.current - 1)"
+  ng-hide="pagination.current == 1"></a>
+
+<span class="pagination-range">{{range.lower}}-{{range.upper}} of {{range.total}}</span>
+
+<a href
+  pvdm-icon="chevron-right"
+  ng-click="setCurrent(pagination.current + 1)"
+  ng-hide="pagination.current == pagination.last || range.upper == 0"></a>
+
+<span
+  pvdm-icon="chevron-right"
+  class="text-muted"
+  ng-show="pagination.current == pagination.last || range.upper == 0"></span>

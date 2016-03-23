@@ -1,3 +1,5 @@
+@import './lib/components/pvdm-insights/pvdm-insights-mixins';
+
 .pvdm-insights {
   margin-bottom: 10px;
   display: -webkit-box;
@@ -33,7 +35,7 @@
 .pvdm-insight {
   cursor: pointer;
   color: white;
-  padding: 5px;
+  padding: 5px 10px 2px 10px;
   display: block;
   &.active {
     border-top:5px;
@@ -59,40 +61,30 @@
 
 .pvdm-insight-label {
   font-size: 11px;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
   text-transform: uppercase;
   }
 
 .pvdm-insight-value {
   font-size: 30px;
+  font-weight: 200;
   line-height: 30px;
   }
 
-// Skins
+/**
+ * Skins
+ */
 
-@mixin insight-variant($color) {
-  background: $color;
-  border-bottom: solid 5px $color;
-  &.active {
-    border-bottom: solid 5px darken($color, 10%);
-    }
-  }
+$insight-skins:
+  (default, #117EAA),
+  (info, #68C6E8),
+  (warning, #E77924),
+  (danger, #E53D44),
+  (notice, #117EAA);
 
-.insight--default {
-  @include insight-variant(#117EAA)
+@each $name, $color in $insight-skins {
+  .insight-#{$name} {
+    @include pvdm-insight-variant($color);
   }
-
-.insight--info {
-  @include insight-variant(#68C6E8)
-  }
-
-.insight--warning {
-  @include insight-variant(#E77924)
-  }
-
-.insight--danger {
-  @include insight-variant(#E53D44)
-  }
-
-.insight--notice {
-  @include insight-variant(#117EAA)
-  }
+}

@@ -12,8 +12,8 @@ angular
       header: '@'
       close: '@'
     transclude:
-      header: '?trowserHeader'
       body: 'trowserBody'
+      stage: '?trowserStage'
       primary: '?trowserPrimaryActions'
       secondary: '?trowserSecondaryActions'
   )

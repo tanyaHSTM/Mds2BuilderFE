@@ -1,0 +1,63 @@
+.help-heading {
+  margin: 5px;
+  margin-top: 2px;
+  font-size: 18px;
+  color: #008b8b;
+  font-weight: 300;
+}
+
+.help-message {
+  margin: 5px;
+  font-size: 12px;
+  color: black;
+}
+
+.input-help-group {
+  position: relative;
+}
+
+
+.left_arrow_box {
+  display: block;
+  position: relative;
+  background: white;
+  border: 1px solid #ababab;
+  border-top: 4px solid #008b8b;
+  margin-top: 10px;
+  left: 25px;
+  bottom: 10px;
+  float: left;
+  z-index: 100;
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.25);
+  .close {
+    position: absolute;
+    top: 2px;
+    right:10px;
+  }
+}
+
+.left_arrow_box:after, .left_arrow_box:before {
+  right: 100%;
+  top: 40%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.left_arrow_box:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 8px;
+  margin-top: -8px;
+}
+.left_arrow_box:before {
+  border-color: rgba(25, 23, 23, 0);
+  border-right-color: #ababab;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+

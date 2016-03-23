@@ -26,6 +26,7 @@ angular
             params = {}
             params[ngModel.$name] = currentValue
             angular.extend(params, JSON.parse(attrs.params)) if attrs.params
+#             angular.extend(params, attrs.params) if attrs.params
             $http
               .post( "/api/validation/#{type}", params )
               .success( (data, status, headers, config) ->

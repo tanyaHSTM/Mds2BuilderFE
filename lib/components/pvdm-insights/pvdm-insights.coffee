@@ -3,26 +3,22 @@ angular
 
   .module('pvdm.components')
 
-  .directive('pvdmInsights', ->
-    restrict: 'E'
-    replace: true
+  .component('pvdmInsights',
     templateUrl: 'pvdm-insights.html'
-    scope:
-      collection: '='
-      filter: '='
-      insights: '='
     controller: 'pvdmInsightsCtrl'
     controllerAs: 'insightsCtrl'
-    bindToController: true
+    bindings:
+      collection: '<'
+      filter: '<'
+      insights: '<'
   )
 
   .controller( 'pvdmInsightsCtrl', ->
-    vm = @
-    vm.set = (param, value, label) ->
-      vm.filter.set(param, value, label)
-    vm.reset = ->
-      insight.active = false for insight in vm.insights
-      vm.filter.reset()
+    @set = (param, value, label) =>
+      @insights.forEach( (insight) ->
+        insight.active = false
+      )
+      @filter.setExclusive(param, value, label) unless !param
     return
   )
 

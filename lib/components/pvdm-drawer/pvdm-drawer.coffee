@@ -9,5 +9,12 @@ angular
     transclude:
       header: 'drawerHeader'
       body: 'drawerBody'
-      footer: 'drawerFooter'
+      primary: '?drawerPrimaryActions'
+      secondary: '?drawerSecondaryActions'
+  )
+
+  .run( ($rootScope, $uibModalStack) ->
+    $rootScope.$on( '$stateChangeSuccess', (evt, toState, toParams, fromState, fromParams) ->
+      $uibModalStack.dismissAll('auto_logout')
+    )
   )

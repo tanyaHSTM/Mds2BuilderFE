@@ -16,10 +16,6 @@
   &.off {
     background: #C7C7C7;
     }
-  &.indeterminate {
-    background: #365EBF;
-    background: linear-gradient(to right, #365EBF 0%, #AEAEAE 100%);
-    }
   }
 
 .pvdm-toggle-thumb {
@@ -28,17 +24,13 @@
   width: 18px;
   position: absolute;
   top: 2px;
-  border-radius: 10px;
+  border-radius: 50%;
   background: #fff;
   .on > & {
     right: 2px;
     }
   .off > & {
     left: 2px;
-    }
-  .indeterminate > & {
-    left: 50%;
-    margin-left: -10px;
     }
   }
 
@@ -55,8 +47,7 @@
 .pvdm-toggle-label-on {
   color: #fff;
   left: 10px;
-  .off > &,
-  .indeterminate > & {
+  .off > & {
     display: none;
     }
   }
@@ -64,8 +55,7 @@
 .pvdm-toggle-label-off {
   color: #000;
   right: 10px;
-  .on > &,
-  .indeterminate > & {
+  .on > & {
     display: none;
     }
   }

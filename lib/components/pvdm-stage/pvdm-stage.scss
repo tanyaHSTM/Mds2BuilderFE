@@ -2,7 +2,7 @@
 
 .pvdm-stage {
   @include clearfix;
-  margin-top: 0;
+  margin-top: 8px;
   margin-bottom: -8px;
   }
 
@@ -12,7 +12,7 @@
   .pvdm-record-detail-stage & {
     padding-top: 8px;
     margin-top: 15px;
-    border-top: 1px solid #C7C7C7;
+    border-top: 1px solid #C8C8C8;
     background-color: #f2faff;
     }
   }
@@ -27,9 +27,11 @@
   position: absolute;
   right: 30px;
   bottom: -15px;
-  border-width: 0 1px 1px 1px;
-  border-color: #AEAEAE;
-  border-style: solid;
+  border: {
+    width: 0 1px 1px 1px;
+    color: #C8C8C8;
+    style: solid;
+  }
   .pvdm-record-detail-stage .active & {
     background-color: #f2faff;
     }

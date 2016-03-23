@@ -12,7 +12,7 @@ angular
     "DEFAULT_LANGUAGE":
       value: "en-US"
     "PAGINATION_LIMIT":
-      value: 5
+      value: 10
   ))
 
   .constant( "PATHS", Object.defineProperties( {},

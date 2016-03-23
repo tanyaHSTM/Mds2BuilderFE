@@ -10,9 +10,15 @@
     ng-transclude="body">
   </div>
 
-  <div
-    class="pvdm-drawer-footer"
-    ng-transclude="footer">
+  <div class="pvdm-drawer-footer">
+    <div
+      class="form-group pvdm-drawer-secondary-actions"
+      ng-transclude="secondary">
+    </div>
+    <div
+      class="form-group pvdm-drawer-primary-actions"
+      ng-transclude="primary">
+    </div>
   </div>
 
 </div>

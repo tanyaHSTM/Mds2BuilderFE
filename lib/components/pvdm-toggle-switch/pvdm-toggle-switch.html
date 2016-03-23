@@ -1,8 +1,12 @@
 <span
-  name="{{name}}"
+  ng-click="switch.toggle()"
   class="pvdm-toggle-switch"
-  ng-class="{disabled: disabled, on:checked, off:!checked, indeterminate:indeterminate}">
-    <span class="pvdm-toggle-label pvdm-toggle-label-on">{{trueLabel|translate}}</span>
-    <span class="pvdm-toggle-label pvdm-toggle-label-off">{{falseLabel|translate}}</span>
+  ng-class="{
+    disabled : switch.disabled,
+    on : switch.checked,
+    off : !switch.checked
+  }">
+    <span class="pvdm-toggle-label pvdm-toggle-label-on">{{switch.trueLabel|translate}}</span>
+    <span class="pvdm-toggle-label pvdm-toggle-label-off">{{switch.falseLabel|translate}}</span>
     <span class="pvdm-toggle-thumb"></span>
 </span>

@@ -5,8 +5,9 @@ angular
   .module( 'pvdm.components' )
 
   .component( 'pvdmNavIcon',
-    controller: 'pvdmNavIconCtrl'
     templateUrl: 'pvdm-nav-icon.html'
+    controller: 'pvdmNavIconCtrl'
+    controllerAs: 'navIcon'
   )
 
   .controller( 'pvdmNavIconCtrl', (offCanvasNav) ->

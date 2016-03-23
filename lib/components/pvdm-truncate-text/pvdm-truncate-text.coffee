@@ -6,4 +6,5 @@ angular
 
   .component( 'pvdmTruncateText',
     templateUrl:'pvdm-truncate.html'
+    transclude: true
   )

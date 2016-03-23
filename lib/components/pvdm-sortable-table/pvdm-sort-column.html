@@ -1,10 +1,13 @@
-<a href
-  class="pvdm-sort-link">
+<span
+  class="pvdm-sort-header"
+  ng-class="collection.reversed && 'descending' || 'ascending'">
 
-  <ng-transclude></ng-transclude>
+  <span class="sort-link-text">
+    <span ng-transclude></span>
+    <span
+      class="sort-link-icon"
+      ng-if="collection.sortKey===sortBy"
+      ng-class="collection.reversed && 'glyphicon-chevron-down' || 'glyphicon-chevron-up'"></span>
+  </span>
 
-  <span
-    ng-if="collection.key===sortBy"
-    ng-class="{'glyphicon-chevron-up':!collection.reverse, 'glyphicon-chevron-down':collection.reverse}"></span>
-
-</a>
+</span>

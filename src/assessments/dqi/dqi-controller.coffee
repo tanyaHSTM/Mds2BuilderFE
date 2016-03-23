@@ -4,9 +4,10 @@ angular
 
   .module( "pvdm.assessments.dqi" )
 
-  .controller( "dqi.controllers.collection", ( $state, $filter, Collection, DqiSchema, ASSESSMENT_TYPE) ->
+  .controller( "dqi.controllers.collection", ( $state, $filter, Collection, DqiSchema, ASSESSMENT_TYPE, MDS2) ->
     
     vm = @
+    vm.MDS2 = MDS2
     vm.state = $state
 
     vm.schema = DqiSchema.schema
@@ -14,9 +15,10 @@ angular
     vm.model = DqiSchema.model
     # Assessments
     vm.assessments = []
-    vm.assessments = new Collection(vm.assessments, 'Resident_identifier', reverse=true)
+    vm.assessments = new Collection(vm.assessments).sortBy('Resident_identifier')
 
     vm.addAssessment = ->
+      vm.model.id = vm.model.id + 1
       vm.assessmentData = angular.copy(vm.model)
       vm.assessments.add(vm.assessmentData)
     # Table

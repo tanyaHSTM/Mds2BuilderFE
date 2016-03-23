@@ -1,0 +1,78 @@
+<div class="pvdm-accordian main-nav">
+
+  <!-- Manage -->
+  <pvdm-accordian-group
+    classes="abaqis-manage"
+    label="manage.label"
+    icon="cogwheel">
+
+    <!-- Facilities -->
+    <li ng-if="nav.showMultipleFacilitiesLink"
+      ng-class="{selected:nav.facilitiesSelected}">
+      <a translate
+        href="#/manage/facilities"
+        id="ocn-facilities-link"
+        ng-click="nav.close()">
+          facilities.label
+      </a>
+    </li>
+
+    <!-- Facility -->
+    <li ng-if="nav.showSingleFacilityLink"
+      ng-class="{selected:nav.facilitiesSelected}">
+      <a translate
+        href="#/manage/facilities/{{nav.session.user.facilityIds[0]}}"
+        id="ocn-facility-link"
+        ng-click="nav.close()">
+          facilities.facility
+      </a>
+    </li>
+
+    <!-- MDS -->
+    <li ng-if="nav.showMdsLink"
+      ng-class="{selected:nav.mdsSelected}">
+      <a translate
+        href="#/manage/mds"
+        id="ocn-mds-link"
+        ng-click="nav.close()">
+          mds.label
+      </a>
+    </li>
+
+    <!-- Users -->
+    <li ng-if="nav.showUsersLink"
+      ng-class="{selected:nav.usersSelected}">
+      <a translate
+        href="#/manage/users"
+        id="ocn-users-link"
+        ng-click="nav.close()">
+          users.label
+      </a>
+    </li>
+  </pvdm-accordian-group>
+
+  <!-- Assess -->
+  <pvdm-accordian-group
+    classes="abaqis-assess"
+    label="assess.label"
+    icon="pen">
+    <!-- coming soon -->
+  </pvdm-accordian-group>
+
+  <!-- Analyze -->
+  <pvdm-accordian-group
+    classes="abaqis-analyze"
+    label="analyze.label"
+    icon="charts">
+    <!-- coming soon -->
+  </pvdm-accordian-group>
+
+  <!-- Improve -->
+  <pvdm-accordian-group
+    classes="abaqis-improve"
+    label="improve.label"
+    icon="wrench">
+    <!-- coming soon -->
+  </pvdm-accordian-group>
+
+</div>

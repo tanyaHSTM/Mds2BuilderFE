@@ -1,0 +1,13 @@
+<div
+  ng-show="pageLoader.show"
+  class="pvdm-page-loader"
+  ng-class="{'hide-header': pageLoader.svc.hideHeader}">
+
+  <div class="loader toggle">
+    <i pvdm-icon="refresh" class="loader-icon spin"></i>
+    <span translate class="loader-text">
+      {{pageLoader.svc.message}}
+    </span>
+  </div>
+
+</div>

@@ -1,0 +1,114 @@
+.pvdm-trowser-steps {
+  position: relative;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  }
+
+.pvdm-trowser-step {
+  position: relative;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  }
+
+.pvdm-trowser-step-number {
+  display: block;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  font-size: 17px;
+  line-height: 28px;
+  color: #777677;
+  margin: 0 auto;
+  border: 1px solid #777677;
+  box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1);
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  z-index: 500;
+  .active > & {
+    background: #365EBF;
+    color: #fff;
+    }
+  }
+
+.pvdm-trowser-step-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #777677;
+  position: relative;
+  z-index: 500;
+  text-align: center;
+  }
+
+.pvdm-trowser-step-line {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  display: block;
+  border-top: 1px solid #777677;
+  position: absolute;
+  top: 15px;
+  }
+
+pvdm-trowser-steps {
+  .pvdm-trowser-step:first-child .pvdm-trowser-step-line {
+    width: 50%;
+    right: 0!important;
+    left: 50%;
+    }
+  .pvdm-trowser-step:last-child .pvdm-trowser-step-line {
+    width: 50%;
+    }
+  }
+
+/**
+ * Legacy Firefox implementation treats all flex containers
+ * as inline-block elements.
+  */
+@-moz-document url-prefix() {
+  .flex-container {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    }
+  }

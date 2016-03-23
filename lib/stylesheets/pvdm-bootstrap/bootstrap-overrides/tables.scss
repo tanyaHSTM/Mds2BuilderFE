@@ -2,20 +2,16 @@
  * Kill bold styling on column headers
  */
 
-.table {
-  > thead > tr > th {
-    font-weight: normal !important;
-    }
+.table > thead > tr > th {
+  font-weight: normal;
   }
 
 /**
  * Hover state for multiple tbody
  */
 
-.body-hover {
-  > tbody:hover {
-    background-color: #f5f5f5;
-    }
+.body-hover > tbody:hover {
+  background-color: #f5f5f5;
   }
 
 /**
@@ -31,6 +27,7 @@ tbody.even {
  */
 
 td > a {
+  display: block;
   margin: -8px;
   padding: 8px;
   }
@@ -40,5 +37,29 @@ td > a {
  */
 
 .table-hover > tbody > tr:hover {
-  background-color: #dee8fb!important;
+  background-color: #dee8fb;
   }
+
+/**
+ * Allow override of hover on single rows
+ */
+
+.table-hover > tbody > tr.ignore-hover {
+  &:nth-child(odd):hover {
+    background-color: #f0f2f4;
+    }
+  &:nth-child(even):hover {
+    background-color: #ffffff;
+    }
+  }
+
+/**
+ * Selected row color
+ */
+table > tbody > tr.selected-row {
+  td,
+  th {
+    background-color: #365EBF;
+    color: #ffffff;
+    }
+}

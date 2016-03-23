@@ -1,0 +1,27 @@
+.pvdm-page-loader {
+  z-index: 1100;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 52px;
+  background: #efefef;
+  text-align: center;
+  .loader {
+    margin-top: 15%;
+    }
+  .loader-icon,
+  .loader-text {
+    display: block;
+    }
+  .loader-icon {
+    font-size: 75px;
+    color: #ccc;
+    }
+  .loader-text {
+    font-size: 16px;
+    }
+  &.hide-header {
+    top: 0;
+    }
+  }

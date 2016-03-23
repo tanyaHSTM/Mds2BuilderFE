@@ -12,6 +12,10 @@ angular
       type: 'object'
       properties:
 
+        id:
+          type: 'integer'
+          default: -1
+
         Master_no:
           type: 'string'
           title: '(Master_no) Master no. from CCIM'
@@ -700,7 +704,8 @@ angular
           validationMessage: "Format must be yyyy"
 
     schemaForm.form = [
-
+      
+      "id",
       "Master_no",
       "Resident_identifier",
       {

@@ -18,7 +18,23 @@ label[for] {
   * Add styling to match regular fields
   */
 .form-control-static {
-  background: #fff;
+  background: #efefef;
+  font-style: italic;
   border: 1px solid #c7c7c7;
   padding: 6px 16px;
+  label & {
+    font-weight: normal;
+    }
+  .disabled & {
+    cursor: default;
+    color: #ccc;
+    }
+  }
+
+/**
+ * Remove double border
+ */
+.input-group-btn + .form-control-static,
+.form-control-static + .input-group-btn {
+  border-left-width: 0;
   }

@@ -1,21 +1,28 @@
 <div class="form-group pvdm-dropdown-filter">
 
-  <div dropdown-filter
+  <div
+    ng-class="{active: dropdown.svc.active}"
     class="btn-group dropdown-filter-wrapper">
 
-    <button dropdown-filter-toggle
+    <button
       type="button"
       class="btn btn-default btn-gradient uib-dropdown-toggle"
-      data-toggle="dropdown"
-      aria-expanded="false">
+      aria-expanded="false"
+      ng-click="dropdown.toggle($event)">
         <span translate>app.filter</span>
         <span class="caret"></span>
     </button>
 
     <div
-      class="dropdown-filter-menu"
+      class="dropdown-filter-menu fade-in"
       role="menu">
         <ng-transclude></ng-transclude>
+        <button translate
+          type="button"
+          class="btn btn-link btn-link-compact"
+          ng-click="dropdown.clearFilter($event)">
+          app.clear_filter
+        </button>
     </div>
 
   </div>

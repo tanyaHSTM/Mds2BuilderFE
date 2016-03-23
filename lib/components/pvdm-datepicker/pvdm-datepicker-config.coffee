@@ -11,8 +11,8 @@ angular
     angular.extend(uibDatepickerPopupConfig,
       datepickerPopup: 'MMM d, yyyy'
       showButtonBar: false
-      datepickerTemplateUrl: 'pvdm-datepicker.html'
-      datepickerPopupTemplateUrl: 'pvdm-datepicker-popup.html'
+#       datepickerTemplateUrl: 'pvdm-datepicker.html'
+#       datepickerPopupTemplateUrl: 'pvdm-datepicker-popup.html'
       # Defaults (0.14.3)
       # --------------------------------------
       # datepickerPopup: 'yyyy-MM-dd',

@@ -2,16 +2,32 @@
   cursor: pointer;
   }
 
-.pvdm-sort-link {
+.pvdm-sort-header {
+  display: block;
+  margin: -8px;
+  padding: 8px;
   white-space: nowrap;
-  padding-right: 16px;
-  position: relative;
-  [class*="glyphicon-"] {
-    position: absolute;
-    right: 0;
+  color: #365ebf;
+  &:hover,
+  &:focus {
+    color: #254183;
+  }
+  &.ascending {
+    cursor: s-resize;
+    }
+  &.descending {
+    cursor: n-resize;
     }
   }
 
-th a:hover {
-  text-decoration: none;
+.sort-link-text {
+  position: relative;
+  padding-right: 17px;
+  }
+
+.sort-link-icon {
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: -2px;
   }

@@ -1,0 +1,24 @@
+/**
+ * Mixin to provide custom coloring for according links
+ */
+
+@mixin pvdm-accordian-group-variant($border, $anchor) {
+  border-left: 5px solid $border;
+  .pvdm-accordian-collapse {
+    a {
+      border-bottom: 1px solid lighten(#464646, 5%);
+      }
+    a:link,
+    a:visited,
+    a:active {
+      color: $anchor;
+      }
+    a:hover {
+      background-color: $border;
+      color: $anchor;
+      }
+    li.selected {
+      background: lighten(#464646, 5%);
+      }
+    }
+  }

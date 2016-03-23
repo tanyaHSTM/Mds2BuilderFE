@@ -5,7 +5,7 @@
   position: relative;
   display: block;
   background-color: #e7e7e7;
-  border-bottom: 1px solid #AEAEAE;
+  border-bottom: 1px solid #C8C8C8;
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 70px;
@@ -21,8 +21,10 @@
 .pvdm-page-header-title {
   margin: 20px 0 0 30px;
   padding: 0;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  line-height: 26px;
   clear: both;
   }
 
@@ -35,7 +37,14 @@
   float: left;
   clear: both;
   .pvdm-back-icon {
-    font-size:12px;
+    color: #e7e7e7;
+    font-size: 12px;
+    margin-right: -5px;
+    text-shadow: -2px 0px 0px #365ebf;
+    }
+  .pvdm-back-text {
+    letter-spacing: 0.5px;
+    font-weight: 300;
     }
   }
 

@@ -1,0 +1,17 @@
+@import './lib/components/pvdm-accordian/pvdm-accordian-mixins';
+
+/**
+ * Set abaqis accordian nav styles
+ */
+
+$main-nav-skins:
+  (manage, #00b4a0, #ffffff),
+  (assess, #5596e6, #ffffff),
+  (analyze, #9855d4, #ffffff),
+  (improve, #ff3ca0, #ffffff);
+
+@each $name, $color, $link in $main-nav-skins {
+  .abaqis-#{$name} {
+    @include pvdm-accordian-group-variant($color, $link);
+  }
+}

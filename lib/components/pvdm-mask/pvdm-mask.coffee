@@ -18,15 +18,6 @@ angular
         if $event.preventDefault then $event.preventDefault()
       else
         mask.deactivate()
-    $rootScope.$on( 'pvdm-toggle-ocn', (event, active) ->
-      if active
-        mask.activate(true)
-      else
-        mask.deactivate()
-    )
-    $rootScope.$on( 'pvdm-logout-success', (event) ->
-      mask.deactivate()
-    )
     return
   )
 
@@ -40,4 +31,12 @@ angular
     @deactivate = ->
       @set(false)
     return
+  )
+
+  .run( ($rootScope, mask) ->
+    #
+    # Hide mask on logout/auto-logout
+    $rootScope.$on( 'user:logout', (event) ->
+      mask.deactivate()
+    )
   )

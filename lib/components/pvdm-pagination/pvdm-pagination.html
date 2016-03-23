@@ -1,27 +1,9 @@
-<div
-  class="pvdm-pagination"
-  ng-if="range.upper">
+<div class="pvdm-pagination">
 
-  <span
-    pvdm-icon="chevron-left"
-    class="text-muted"
-    ng-show="pagination.current == 1"></span>
+  <div class="pagination-count">{{ pp.label | translate : {count:pp.count} }}</div>
 
-  <a href
-    pvdm-icon="chevron-left"
-    ng-click="setCurrent(pagination.current - 1)"
-    ng-hide="pagination.current == 1"></a>
-
-  <span>{{range.lower}}-{{range.upper}} of {{range.total}}</span>
-
-  <a href
-    pvdm-icon="chevron-right"
-    ng-click="setCurrent(pagination.current + 1)"
-    ng-hide="pagination.current == pagination.last"></a>
-
-  <span
-    pvdm-icon="chevron-right"
-    class="text-muted"
-    ng-show="pagination.current == pagination.last"></span>
+  <ng-transclude>
+    <dir-pagination-controls></dir-pagination-controls>
+  </ng-transclude>
 
 </div>

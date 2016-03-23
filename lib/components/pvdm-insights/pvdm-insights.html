@@ -1,10 +1,23 @@
-<div class="pvdm-insights">
-  <pvdm-insight
-    ng-repeat="insight in insightsCtrl.insights"
-    type="{{insight.type}}"
-    active="insightsCtrl.filter.params[insight.param].value"
-    param="{{insight.param}}"
-    count="insight.count"
-    label="{{insight.label}}"
-    tip="{{insight.tip|translate}}"></pvdm-insight>
+<div class="row">
+
+  <div class="col-lg-9 col-sm-12">
+
+    <div class="pvdm-insights">
+
+      <div
+        ng-repeat="insight in insightsCtrl.insights"
+        uib-tooltip="{{insight.tip|translate}}"
+        tooltip-append-to-body="true"
+        tooltip-class="text-left"
+        ng-click="insightsCtrl.set(insight.param, true, insight.label)"
+        class="pvdm-insight insight-{{insight.type}}"
+        ng-class="{'active': insightsCtrl.filter.params[insight.param].value}">
+          <div class="pvdm-insight-value">{{insight.count}}</div>
+          <div class="pvdm-insight-label">{{insight.label|translate}}</div>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

@@ -25,8 +25,7 @@
           class="pvdm-datepicker--btn"
           ng-click="toggleMode()"
           ng-disabled="datepickerMode === maxMode"
-          tabindex="-1"
-          style="width:100%">
+          tabindex="-1" style="width:100%">
             <strong>{{title}}</strong>
         </button>
       </th>
@@ -58,14 +57,13 @@
           <em>{{ weekNumbers[$index] }}</em>
       </td>
       <td
-        ng-repeat="dt in row track by dt.date"
+        ng-repeat="dt in row"
         class="text-center"
         role="gridcell"
         id="{{::dt.uid}}"
         ng-class="::dt.customClass">
           <button
-            type="button"
-            style="min-width:100%"
+            type="button" style="min-width:100%"
             class="pvdm-datepicker--btn"
             ng-class="{'active': dt.selected, active: isActive(dt)}"
             ng-click="select(dt.date)"

@@ -1,73 +1,15 @@
 <div
-  class="pvdmOffCanvasNav"
-  ng-class="{active:sidebar.navService.active}">
+  class="pvdm-off-canvas-nav"
+  ng-class="{active:ocn.svc.active}">
 
-  <!-- Main nav -->
-  <nav class="pvdmNavAccordian--group navmenu navmenu-default navmenu-fixed-left">
+  <div
+    class="pvdm-ocn-main"
+    ng-transclude="main">
+  </div>
 
-    <!-- Manage -->
-    <div class="pvdmNavAccordian pvdm-manage">
+  <div class="pvdm-ocn-footer">
+    <div><span translate>app.copyright</span>, {{ocn.year}}</div>
+    <div ng-transclude="footer"></div>
+  </div>
 
-      <nav class="pvdmNavAccordian--collapse">
-
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="sidebar.setAdmission()">
-              assessments.admission_assessment
-          </a>
-        </li>
-        
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="sidebar.setQuarterly()">
-              assessments.quarterly_assessment
-          </a>
-        </li>
-
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="sidebar.setAnnual()">
-              assessments.annual_assessment
-          </a>
-        </li>
-
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="#">
-              assessments.change_in_status
-          </a>
-        </li>
-
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="#">
-              assessments.correction_of_full
-          </a>
-        </li>
-
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="#">
-              assessments.correction_of_quarterly
-          </a>
-        </li>
-
-        <li>
-          <a translate
-            class="pvdm-ocn-link"
-            ng-click="sidebar.setDischarge()">
-              assessments.discharge_assessment
-          </a>
-        </li>
-
-      </nav>
-    </div>
-
-  </nav>
 </div>

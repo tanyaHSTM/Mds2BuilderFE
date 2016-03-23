@@ -6,11 +6,14 @@ angular
 
   .directive( 'pvdmLinkRow', ($location) ->
     scope:
-      url: '@'
+      disableLink: '='
     link: (scope, element, attrs) ->
-      element.addClass('pvdm-link-row')
+      if scope.disableLink
+        element.addClass('ignore-hover')
+      else
+        element.addClass('pvdm-link-row')
       element.bind('click', (event) ->
-        if ! (/BUTTON|INPUT|A/).test(event.target.nodeName)
+        if !(/BUTTON|INPUT|A/).test(event.target.nodeName) and !scope.disableLink
           $location.url(attrs.pvdmLinkRow)
       )
   )

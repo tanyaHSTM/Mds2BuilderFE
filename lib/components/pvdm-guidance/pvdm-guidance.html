@@ -1,0 +1,22 @@
+<div 
+  class="pvdm-guidance" 
+  ng-if="$ctrl.show">
+
+  <button
+    class="close"
+    ng-click="$ctrl.close()"
+    aria-hidden="true">×</button>
+
+  <div 
+    class="guidance-title"
+    ng-if="$ctrl.title">
+      {{$ctrl.title}}
+  </div>
+
+  <div 
+    class="guidance-message"
+    ng-if="$ctrl.message">
+      {{$ctrl.message}}
+  </div>
+  
+</div>

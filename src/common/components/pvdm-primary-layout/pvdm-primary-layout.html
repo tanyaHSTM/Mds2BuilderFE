@@ -1,0 +1,27 @@
+<div class="pvdm-primary-layout">
+
+  <!--Site header-->
+  <pvdm-site-header></pvdm-site-header>
+
+  <!--Navigation-->
+  <pvdm-off-canvas-nav>
+    <ocn-main>
+      <main-nav></main-nav>
+    </ocn-main>
+    <ocn-footer>
+      <a translate
+        href="https://abaqis.s3.amazonaws.com/abaqis_Terms_of_Use.pdf"
+        target="_blank">
+          app.terms
+      </a>
+    </ocn-footer>
+  </pvdm-off-canvas-nav>
+
+  <!--Wrapper-->
+  <div class="container-fluid">
+    <ui-view></ui-view>
+    <pvdm-page-loader></pvdm-page-loader>
+    <pvdm-mask></pvdm-mask>
+  </div>
+
+</div>

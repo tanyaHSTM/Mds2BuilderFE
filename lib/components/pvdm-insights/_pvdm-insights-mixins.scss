@@ -1,0 +1,11 @@
+/**
+ * Mixin to provide custom coloring for insights
+ */
+
+@mixin pvdm-insight-variant($color) {
+  background: $color;
+  border-bottom: solid 5px $color;
+  &.active {
+    border-bottom: solid 5px darken($color, 10%);
+    }
+  }

@@ -4,47 +4,36 @@ angular
 
   .module( 'pvdm.components' )
 
-  .directive( 'pvdmDropdownFilter', (dropdownFilter) ->
-    restrict: 'E'
+  .component( 'pvdmDropdownFilter',
     transclude: true
-    replace: true
     templateUrl: 'pvdm-dropdown-filter.html'
+    controller: 'dropdownFilterCtrl'
+    controllerAs: 'dropdown'
+    bindings:
+      params: '='
   )
 
-  .directive( 'dropdownFilter', (dropdownFilter) ->
-    restrict: 'A'
-    link: (scope, elem, attr) ->
-      elem.bind( 'click', ($event) ->
-        if $event.stopPropagation then $event.stopPropagation()
-        return
+  .controller( 'dropdownFilterCtrl', ($scope, dropdownFilter, $element, $document) ->
+    #
+    # Clicks outside dropdown close it
+    $document.bind('click', ($event) ->
+      $scope.$apply( ->
+        dropdownFilter.deactivate()
       )
-      scope.$watch( ->
-        dropdownFilter.active
-      , (newValue, oldValue) ->
-        if !angular.isUndefined(newValue)
-          if newValue
-            elem.addClass('active')
-          else
-            elem.removeClass('active')
-      )
-  )
-
-  .directive( 'dropdownFilterToggle', ($document, dropdownFilter) ->
-    restrict: 'A'
-    link: (scope, elem, attr) ->
-      elem.bind( 'click', ($event) ->
-        scope.$apply( ->
-          dropdownFilter.toggle()
-        )
-        return
-      )
-      $document.bind( 'click', ($event) ->
-        scope.$apply( ->
-          dropdownFilter.deactivate()
-        )
-        return
-      )
-      return
+    )
+    #
+    # Clicks inside dropdown do NOT close it
+    $element.bind('click', ($event) ->
+      if $event.stopPropagation then $event.stopPropagation()
+    )
+    @svc = dropdownFilter
+    @clearFilter = =>
+      dropdownFilter.deactivate()
+      @params.reset()
+    @toggle = ($event) ->
+      if $event.stopPropagation then $event.stopPropagation()
+      dropdownFilter.toggle()
+    return
   )
 
   .service( 'dropdownFilter', ->
@@ -60,6 +49,8 @@ angular
   )
 
   .run( ($rootScope, dropdownFilter) ->
+    #
+    # Automatically close dropdown on route change
     $rootScope.$on( '$stateChangeStart', (evt, toState, toParams, fromState, fromParams) ->
       dropdownFilter.deactivate()
     )

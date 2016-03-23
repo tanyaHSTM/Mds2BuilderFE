@@ -1,0 +1,17 @@
+<div class="nav pvdm-trowser-steps">
+
+  <span ng-repeat="step in $ctrl.steps" class="pvdm-trowser-step">
+
+    <span class="pvdm-trowser-step-line"></span>
+
+    <span ng-class="{active: $index===$ctrl.currentStep-1}">
+
+      <span class="pvdm-trowser-step-number">{{$index+1}}</span>
+
+      <span class="pvdm-trowser-step-label" translate>{{::step}}</span>
+
+    </span>
+
+  </span>
+
+</div>
