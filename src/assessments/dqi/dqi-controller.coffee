@@ -4,7 +4,7 @@ angular
 
   .module( "pvdm.assessments.dqi" )
 
-  .controller( "dqi.controllers.collection", ( $state, $filter, Collection, DqiSchema, ASSESSMENT_TYPE, MDS2) ->
+  .controller( "dqi.controllers.collection", ( $state, $filter, $window, Collection, DqiSchema, ASSESSMENT_TYPE, MDS2) ->
     
     vm = @
     vm.MDS2 = MDS2
@@ -20,6 +20,7 @@ angular
     vm.addAssessment = ->
       vm.assessmentData = angular.copy(vm.model)
       vm.assessments.add(vm.assessmentData)
+      $window.scrollTo(0,0)
     # Table
     vm.resetTable = ->
       vm.assessments.records = []
@@ -57,7 +58,8 @@ angular
         n++
     
     ### CSV ###
-    vm.filename = "3333333333_CCIM_20160224.csv"
+    vm.facname = "3333333333"
+    vm.filename = vm.facname+"_CCIM_"+$filter('daysAgoFormatted')(0)+".csv"
     
     vm.getHeaders = ->
       for keyName of vm.model
