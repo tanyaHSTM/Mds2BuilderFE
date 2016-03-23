@@ -22,6 +22,7 @@ angular
 
     #
     # PVDM Modules
+    'pvdm.mainNav'
     'pvdm.directives',
     'pvdm.previousUrl',
     'pvdm.messages',

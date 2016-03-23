@@ -25,6 +25,11 @@
       </tr>
     </tbody>
   </table>
+
+  <pvdm-pagination
+    count="dqiCtrl.assessments.records.length"
+    label="Total Records">
+  </pvdm-pagination>
   
   <div ng-if="!dqiCtrl.assessments.records.length">
     <div class="alert alert-info">

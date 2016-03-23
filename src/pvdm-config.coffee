@@ -8,7 +8,7 @@ angular
 
     #
     # Custom pagination template
-    paginationTemplateProvider.setPath("pvdm-pagination.html")
+    paginationTemplateProvider.setPath('pagination-template.html')
     
     #
     # Define layouts
@@ -17,14 +17,8 @@ angular
       name: "layout:primary"
       template: "<pvdm-primary-layout></pvdm-primary-layout>"
 
-    layoutTrowser =
-      abstract: true
-      name: "layout:trowser"
-      templateUrl: "pvdm-trowser-layout.html"
-
     $stateProvider
       .state(layoutPrimary)
-      .state(layoutTrowser)
 
     #
     # Routes
