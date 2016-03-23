@@ -13,7 +13,7 @@
       <div class="input-group-btn">
         <button
           type="button"
-          ng-csv="dqiCtrl.getAssessmentList.records"
+          ng-csv="dqiCtrl.getAssessmentList"
           csv-header="dqiCtrl.getHeaders()"
           class="btn btn-primary"
           filename="{{dqiCtrl.filename}}">{{'assessments.export_csv'|translate}}
@@ -23,6 +23,13 @@
 
   </pvdm-header-actions>
 </pvdm-page-header>
+
+<form
+  ng-hide="true"
+  sf-schema="dqiCtrl.schema"
+  sf-form="dqiCtrl.form"
+  sf-model="dqiCtrl.model">
+</form>
 
 <ul class="nav nav-tabs">
   <li

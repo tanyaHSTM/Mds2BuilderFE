@@ -21,7 +21,7 @@ angular
           @__records__
       'add':
         value: (item) ->
-          @records.push(item) unless @contains(item)
+          @records.push(item)
           @
       'remove':
         value: (item) ->

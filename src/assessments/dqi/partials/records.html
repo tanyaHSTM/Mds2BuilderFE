@@ -19,7 +19,7 @@
           pvdm-link-row="/dqi/single"
           ng-click="dqiCtrl.setAsssessment(dqiCtrl.assessments.records.indexOf(assessment))"
           dir-paginate="assessment in dqiCtrl.assessments.records
-          | itemsPerPage:dqiCtrl.MDS2.PAGINATION_LIMIT track by assessment.id">
+          | itemsPerPage:dqiCtrl.MDS2.PAGINATION_LIMIT track by $index">
           <td>{{assessment.Master_no}}</td>
           <td>{{assessment.Resident_identifier}}</td>
           <td>{{assessment.AA8}}</td>

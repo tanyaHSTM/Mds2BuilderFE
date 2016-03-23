@@ -18,7 +18,6 @@ angular
     vm.assessments = new Collection(vm.assessments).sortBy('Resident_identifier')
 
     vm.addAssessment = ->
-      vm.model.id = vm.model.id + 1
       vm.assessmentData = angular.copy(vm.model)
       vm.assessments.add(vm.assessmentData)
     # Table
@@ -65,7 +64,7 @@ angular
         key = keyName
 
     # Csv download
-    vm.getAssessmentList = vm.assessments
+    vm.getAssessmentList = vm.assessments.records
 
     return
   )
