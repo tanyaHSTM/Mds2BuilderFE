@@ -23,7 +23,7 @@ angular
       vm.assessments.add(vm.assessmentData)
     # Table
     vm.resetTable = ->
-      vm.assessments.clear()
+      vm.assessments.records = []
 
     vm.setAsssessment = (assessmentId) ->
       vm.assessmentId = assessmentId

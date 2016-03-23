@@ -1,48 +1,51 @@
-<div class="table-responsive">
-  <table pvdm-sortable-table
-    collection="dqiCtrl.assessments"
-    class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th sort-by="'Master_no'"><span translate>assessments.master_no</span></th>
-        <th sort-by="'Resident_identifier'"><span translate>assessments.resident_identifier</span></th>
-        <th sort-by="'AA8'"><span translate>assessments.reason</span></th>
-        <th sort-by="'AB1'"><span translate>assessments.admit_date</span></th>
-        <th sort-by="'A3'"><span translate>assessments.ref_date</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        pvdm-link-row="/dqi/single"
-        ng-click="dqiCtrl.setAsssessment(dqiCtrl.assessments.records.indexOf(assessment))"
-        dir-paginate="assessment in dqiCtrl.assessments.records
-        | itemsPerPage:dqiCtrl.MDS2.PAGINATION_LIMIT track by assessment.id">
-        <td>{{assessment.Master_no}}</td>
-        <td>{{assessment.Resident_identifier}}</td>
-        <td>{{assessment.AA8}}</td>
-        <td>{{assessment.AB1}}</td>
-        <td>{{assessment.A3}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div>
 
-  <pvdm-pagination
-    count="dqiCtrl.assessments.records.length"
-    label="Total Records">
-  </pvdm-pagination>
+  <div class="table-responsive">
+    <table pvdm-sortable-table
+      ng-show="dqiCtrl.assessments.records.length"
+      collection="dqiCtrl.assessments"
+      class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th sort-by="'Master_no'"><span translate>assessments.master_no</span></th>
+          <th sort-by="'Resident_identifier'"><span translate>assessments.resident_identifier</span></th>
+          <th sort-by="'AA8'"><span translate>assessments.reason</span></th>
+          <th sort-by="'AB1'"><span translate>assessments.admit_date</span></th>
+          <th sort-by="'A3'"><span translate>assessments.ref_date</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          pvdm-link-row="/dqi/single"
+          ng-click="dqiCtrl.setAsssessment(dqiCtrl.assessments.records.indexOf(assessment))"
+          dir-paginate="assessment in dqiCtrl.assessments.records
+          | itemsPerPage:dqiCtrl.MDS2.PAGINATION_LIMIT track by assessment.id">
+          <td>{{assessment.Master_no}}</td>
+          <td>{{assessment.Resident_identifier}}</td>
+          <td>{{assessment.AA8}}</td>
+          <td>{{assessment.AB1}}</td>
+          <td>{{assessment.A3}}</td>
+        </tr>
+      </tbody>
+    </table>
+  <div>
   
-  <div ng-if="!dqiCtrl.assessments.records.length">
-    <div class="alert alert-info">
-      <i style="display:inline" pvdm-icon="circle-info"></i>
-      <span translate>assessments.none_selected</span>
-    </div>
-  </div>
-
-  <button
-    type="button"
-    ng-click="dqiCtrl.resetTable()"
-    class="btn btn-danger">
-      <span translate>assessments.clear</span>
-  </button>
+  <pvdm-pagination 
+    ng-show="dqiCtrl.assessments.records.length">
+  </pvdm-pagination>
 
 </div>
+
+<div ng-show="!dqiCtrl.assessments.records.length">
+  <div class="alert alert-info">
+    <i style="display:inline" pvdm-icon="circle-info"></i>
+    <span translate>assessments.none_selected</span>
+  </div>
+</div>
+
+<button
+  type="button"
+  ng-click="dqiCtrl.resetTable()"
+  class="btn btn-danger">
+    <span translate>assessments.clear</span>
+</button>
