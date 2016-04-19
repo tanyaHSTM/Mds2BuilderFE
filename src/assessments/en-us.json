@@ -10,7 +10,7 @@
   "batch":"Batch",
   "records":"Records",
   "resident_generator":"Resident Generator",
-  "master_no":"Master Number",
+  "record_type":"Record Type",
   "resident_identifier":"Resident Identifier",
   "reason":"Reason For Assessment",
   "admit_date":"Admission/Re-entry date",
