@@ -94,10 +94,82 @@ angular
           enum: ['0', '1', '2', '3']
           default: '0'
 
+        C1:
+          type: 'string'
+          title: '(C1) Hearing'
+          enum: ['0', '1', '2', '3']
+          default: '0'
+
+        C3b:
+          type: 'string'
+          title: '(C3b) Writing messages to express needs'
+          enum: ['0', '1']
+          default: '0'
+
+        C3c:
+          type: 'string'
+          title: '(C3c) American sign language or Braille'
+          enum: ['0', '1']
+          default: '0'
+
+        C3d:
+          type: 'string'
+          title: '(C3d) Signs or gestures or sounds'
+          enum: ['0', '1']
+          default: '0'
+
+        C3e:
+          type: 'string'
+          title: '(C3e) Communication board'
+          enum: ['0', '1']
+          default: '0'
+
+        C3f:
+          type: 'string'
+          title: '(C3f) Other mode of expression'
+          enum: ['0', '1']
+          default: '0'
+
         C4:
           type: 'string'
           title: '(C4) Making Self Understood'
           enum: ['0', '1', '2', '3']
+          default: '0'
+
+        C5:
+          type: 'string'
+          title: '(C5) Speech Clarity'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        C6:
+          type: 'string'
+          title: '(C6) Ability to Understand Others'
+          enum: ['0', '1', '2', '3']
+          default: '0'
+
+        D1:
+          type: 'string'
+          title: '(D1) Vision'
+          enum: ['0', '1', '2', '3', '4']
+          default: '0'
+
+        D2a:
+          type: 'string'
+          title: '(D2a) Side vision problems'
+          enum: ['0', '1']
+          default: '0'
+
+        D2b:
+          type: 'string'
+          title: '(D2b) Sees halos, rings, flashes, curtains'
+          enum: ['0', '1']
+          default: '0'
+
+        D3:
+          type: 'string'
+          title: '(D3) Visual Appliances'
+          enum: ['0', '1']
           default: '0'
 
         E1a:
@@ -196,6 +268,12 @@ angular
           enum: ['0', '1', '2']
           default: '0'
 
+        E2:
+          type: 'string'
+          title: '(E2) Mood Persistence'
+          enum: ['0', '1', '2']
+          default: '0'
+
         E4aA:
           type: 'string'
           title: '(E4aA) Wandering frequency'
@@ -222,7 +300,7 @@ angular
 
         E4eA:
           type: 'string'
-          title: '(E4dA) Resists care frequency'
+          title: '(E4eA) Resists care frequency'
           enum: ['0', '1', '2', '3']
           default: '0'
 
@@ -250,6 +328,18 @@ angular
           enum: ['0', '1', '2', '3', '8']
           default: '0'
 
+        G1eA:
+          type: 'string'
+          title: '(G1eA) Locomotion on unit self performance'
+          enum: ['0', '1', '2', '3', '4', '8']
+          default: '0'
+
+        G1gA:
+          type: 'string'
+          title: '(G1gA) Dressing self performance'
+          enum: ['0', '1', '2', '3', '4', '8']
+          default: '0'
+
         G1hA:
           type: 'string'
           title: '(G1hA) Eating self performance'
@@ -262,6 +352,60 @@ angular
           enum: ['0', '1', '2', '3', '4', '8']
           default: '0'
 
+        G4aA:
+          type: 'string'
+          title: '(G4aA) Neck range of motion'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        G4bA:
+          type: 'string'
+          title: '(G4bA) Arm range of motion'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        G4cA:
+          type: 'string'
+          title: '(G4cA) Hand range of motion'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        G4dA:
+          type: 'string'
+          title: '(G4dA) Leg range of motion'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        G4eA:
+          type: 'string'
+          title: '(G4eA) Foot range of motion'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        G4fA:
+          type: 'string'
+          title: '(G4fA) Other limitation/loss range of motion'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        H1a:
+          type: 'string'
+          title: '(H1a) Bowel Continence'
+          enum: ['0', '1', '2', '3', '4']
+          default: '0'
+
+        H1b:
+          type: 'string'
+          title: '(H1b) Bladder Continence'
+          enum: ['0', '1', '2', '3', '4']
+          default: '0'
+
+        H2d:
+          type: 'string'
+          title: '(H2d) Fecal impaction'
+          enum: ['0', '1']
+          default: '0'
+
         H3a:
           type: 'string'
           title: '(H3a) Any scheduled toileting plan'
@@ -271,6 +415,18 @@ angular
         H3b:
           type: 'string'
           title: '(H3b) Bladder retraining program'
+          enum: ['0', '1']
+          default: '0'
+
+        H3d:
+          type: 'string'
+          title: '(H3d) Indwelling catheter'
+          enum: ['0', '1']
+          default: '0'
+
+        H3i:
+          type: 'string'
+          title: '(H3i) Ostomy present'
           enum: ['0', '1']
           default: '0'
 
@@ -316,9 +472,21 @@ angular
           enum: ['0', '1']
           default: '0'
 
+        I2g:
+          type: 'string'
+          title: '(I2g) Respiratory infection'
+          enum: ['0', '1']
+          default: '0'
+
         I2h:
           type: 'string'
           title: '(I2h) Septicemia'
+          enum: ['0', '1']
+          default: '0'
+
+        I2k:
+          type: 'string'
+          title: '(I2k) Urinary tract infection'
           enum: ['0', '1']
           default: '0'
 
@@ -358,9 +526,51 @@ angular
           enum: ['0', '1']
           default: '0'
 
+        J2A:
+          type: 'string'
+          title: '(J2A) Pain symptoms - Frequency'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        J2B:
+          type: 'string'
+          title: '(J2B) Pain Symptoms - Intensity'
+          enum: ['1', '2', '3']
+          default: ''
+
+        J4A:
+          type: 'string'
+          title: '(J4A) Fell in past 30 days'
+          enum: ['0', '1']
+          default: ''
+
+        J4C:
+          type: 'string'
+          title: '(J4C) Hip fracture in last 180 days'
+          enum: ['0', '1']
+          default: ''
+
+        J4D:
+          type: 'string'
+          title: '(J4D) Other fracture in last 180 days'
+          enum: ['0', '1']
+          default: ''
+
         J5c:
           type: 'string'
           title: '(J5c) End-stage disease'
+          enum: ['0', '1']
+          default: '0'
+
+        K3a:
+          type: 'string'
+          title: '(K3a) Weight loss'
+          enum: ['0', '1', '9']
+          default: '0'
+
+        K4c:
+          type: 'string'
+          title: '(K4c) Leaves 25% + food uneaten at most meals'
           enum: ['0', '1']
           default: '0'
 
@@ -376,6 +586,12 @@ angular
           enum: ['0', '1']
           default: '0'
 
+        K5h:
+          type: 'string'
+          title: '(K5h) On a planned weight change program'
+          enum: ['0', '1']
+          default: '0'
+
         K6a:
           type: 'string'
           title: '(K6a) Parenteral/Enteral Intake - total calories'
@@ -386,6 +602,24 @@ angular
           type: 'string'
           title: '(K6b) Parenteral/Enteral Intake - average intake'
           enum: ['0', '1', '2', '3', '4', '5']
+          default: '0'
+
+        L1c:
+          type: 'string'
+          title: '(L1c) Some or all natural teeth lost'
+          enum: ['0', '1']
+          default: '0'
+
+        L1d:
+          type: 'string'
+          title: '(L1d) Broken, loose, or carious teeth'
+          enum: ['0', '1']
+          default: '0'
+
+        L1e:
+          type: 'string'
+          title: '(L1e) Inflamed gums, oral abscesses, etc.'
+          enum: ['0', '1']
           default: '0'
 
         M1a:
@@ -416,6 +650,12 @@ angular
           type: 'string'
           title: '(M2a) Stage of pressure ulcer'
           enum: ['0', '1', '2', '3', '4']
+          default: '0'
+
+        M3:
+          type: 'string'
+          title: '(M3) History of Resolved/Cured Ulcers'
+          enum: ['0', '1']
           default: '0'
 
         M4b:
@@ -520,6 +760,12 @@ angular
           enum: ['0', '1']
           default: '0'
 
+        N2:
+          type: 'string'
+          title: '(N2) Average Time Involved in Activities'
+          enum: ['0', '1', '2', '3'] 
+          default: '0'
+
         O3:
           type: 'string'
           title: '(O3) Injections'
@@ -528,6 +774,39 @@ angular
           maxLength: 1
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
+
+        O4b:
+          type: 'string'
+          title: '(O4b) Days received Antianxiety'
+          default: '0'
+          required: true
+          maxLength: 1
+          pattern: REGEX.DAYS
+          validationMessage: "Must be between 0-7"
+
+        O4c:
+          type: 'string'
+          title: '(O4c) Days received Antidepressant'
+          default: '0'
+          required: true
+          maxLength: 1
+          pattern: REGEX.DAYS
+          validationMessage: "Must be between 0-7"
+
+        O4d:
+          type: 'string'
+          title: '(O4d) Days received Hypnotic'
+          default: '0'
+          required: true
+          maxLength: 1
+          pattern: REGEX.DAYS
+          validationMessage: "Must be between 0-7"
+
+        P1aO:
+          type: 'string'
+          title: '(P1aO) Hospice care'
+          enum: ['0', '1']
+          default: '0'
 
         P1baA:
           type: 'string'
@@ -678,6 +957,24 @@ angular
           pattern: REGEX.DAYS
           validationMessage: "Must be between 0-7"
 
+        P4c:
+          type: 'string'
+          title: '(P4c) Trunk restraint'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        P4d:
+          type: 'string'
+          title: '(P4d) Limb restraint'
+          enum: ['0', '1', '2']
+          default: '0'
+
+        P4e:
+          type: 'string'
+          title: '(P4e) Limb restraint'
+          enum: ['0', '1', '2']
+          default: '0'
+
         P7:
           type: 'string'
           title: '(P7) Physician Visits'
@@ -694,6 +991,12 @@ angular
           maxLength: 2
           pattern: REGEX.VISITS
           validationMessage: "Must be between 0-14"
+
+        R3a:
+          type: 'string'
+          title: '(R3a) Discharge To Facility/Level Of Care'
+          enum: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'] 
+          default: '0'
 
         "IAR-1":
           type: 'string'
@@ -778,6 +1081,56 @@ angular
           {value: '3', name: '3 - Severely Impaired'}
       ]},
       {
+        key: 'C1'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Hears adequately'},
+          {value: '1', name: '1 - Minimal difficulty'},
+          {value: '2', name: '2 - Hears in special situations only'},
+          {value: '3', name: '3 - Highly impaired'}
+      ]},
+      {
+        key: 'C3b'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'C3c'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'C3d'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'C3e'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'C3f'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
         key: 'C4'
         type: 'select'
         titleMap: [
@@ -786,6 +1139,59 @@ angular
           {value: '1', name: '1 - Usually Understood'},
           {value: '2', name: '2 - Sometimes Understood'},
           {value: '3', name: '3 - Rarely or Never Understood'}
+      ]},
+      {
+        key: 'C5'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No change'},
+          {value: '1', name: '1 - Improved'},
+          {value: '2', name: '2 - Deteriorated'}
+      ]},
+      {
+        key: 'C6'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Understands'},
+          {value: '1', name: '1 - Usually understands'},
+          {value: '2', name: '2 - Sometimes understands'},
+          {value: '3', name: '3 - Rarely or never understands'}
+      ]},
+      {
+        key: 'D1'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Understands'},
+          {value: '1', name: '1 - Usually understands'},
+          {value: '2', name: '2 - Sometimes understands'},
+          {value: '3', name: '3 - Rarely or never understands'}
+      ]},
+      {
+        key: 'D2a'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'D2b'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'D3'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
       ]},
       {
         key: 'E1a'
@@ -932,6 +1338,15 @@ angular
           {value: '2', name: '2 - Indicator of this type exhibited daily or almost daily'}
       ]},
       {
+        key: 'E2'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No mood indicators'},
+          {value: '1', name: '1 - Indicators present, easily altered'},
+          {value: '2', name: '2 - Indicators present, not easily altered'}
+      ]},
+      {
         key: 'E4aA'
         type: 'select'
         titleMap: [
@@ -994,6 +1409,18 @@ angular
           {value: '8', name: '8 - Activity did not occur during the entire 7-day period'}
       ]},
       {
+        key: 'G1bA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Independent'},
+          {value: '1', name: '1 - Supervision'},
+          {value: '2', name: '2 - Limited Assistance'},
+          {value: '3', name: '3 - Extensive Assistance'},
+          {value: '4', name: '4 - Total Dependence'},
+          {value: '8', name: '8 - Activity did not occur during the entire 7-day period'}
+      ]},
+      {
         key: 'G1bB'
         type: 'select'
         titleMap: [
@@ -1003,7 +1430,31 @@ angular
           {value: '2', name: '2 - One person physical assist'},
           {value: '3', name: '3 - Two+ persons physical assist'}
           {value: '8', name: '8 - ADL activity itself did not occur during the entire 7-days'}
-      ]}
+      ]},
+      {
+        key: 'G1eA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Independent'},
+          {value: '1', name: '1 - Supervision'},
+          {value: '2', name: '2 - Limited Assistance'},
+          {value: '3', name: '3 - Extensive Assistance'},
+          {value: '4', name: '4 - Total Dependence'},
+          {value: '8', name: '8 - Activity did not occur during the entire 7-day period'}
+      ]},
+      {
+        key: 'G1gA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Independent'},
+          {value: '1', name: '1 - Supervision'},
+          {value: '2', name: '2 - Limited Assistance'},
+          {value: '3', name: '3 - Extensive Assistance'},
+          {value: '4', name: '4 - Total Dependence'},
+          {value: '8', name: '8 - Activity did not occur during the entire 7-day period'}
+      ]},
       {
         key: 'G1hA'
         type: 'select'
@@ -1029,6 +1480,90 @@ angular
           {value: '8', name: '8 - Activity did not occur during the entire 7-day period'}
       ]},
       {
+        key: 'G4aA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No limitation'},
+          {value: '1', name: '1 - Limitation on 1 side'},
+          {value: '2', name: '2 - Limitation on both sides'}
+      ]},
+      {
+        key: 'G4bA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No limitation'},
+          {value: '1', name: '1 - Limitation on 1 side'},
+          {value: '2', name: '2 - Limitation on both sides'}
+      ]},
+      {
+        key: 'G4cA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No limitation'},
+          {value: '1', name: '1 - Limitation on 1 side'},
+          {value: '2', name: '2 - Limitation on both sides'}
+      ]},
+      {
+        key: 'G4dA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No limitation'},
+          {value: '1', name: '1 - Limitation on 1 side'},
+          {value: '2', name: '2 - Limitation on both sides'}
+      ]},
+      {
+        key: 'G4eA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No limitation'},
+          {value: '1', name: '1 - Limitation on 1 side'},
+          {value: '2', name: '2 - Limitation on both sides'}
+      ]},
+      {
+        key: 'G4fA'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No limitation'},
+          {value: '1', name: '1 - Limitation on 1 side'},
+          {value: '2', name: '2 - Limitation on both sides'}
+      ]},
+      {
+        key: 'H1a'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Continent'},
+          {value: '1', name: '1 - Usually continent'},
+          {value: '2', name: '2 - Occasionally incontinent'},
+          {value: '3', name: '3 - Frequently incontinent'},
+          {value: '4', name: '4 - Incontinent'}
+      ]},
+      {
+        key: 'H1b'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Continent'},
+          {value: '1', name: '1 - Usually continent'},
+          {value: '2', name: '2 - Occasionally incontinent'},
+          {value: '3', name: '3 - Frequently incontinent'},
+          {value: '4', name: '4 - Incontinent'}
+      ]},
+      {
+        key: 'H2d'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
         key: 'H3a'
         type: 'select'
         titleMap: [
@@ -1037,12 +1572,28 @@ angular
           {value: '1', name: '1 - Toileting plan used'},
       ]},
       {
-        key: 'H3a'
+        key: 'H3b'
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
           {value: '0', name: '0 - None'},
           {value: '1', name: '1 - Bladder retraining program used'},
+      ]},
+      {
+        key: 'H3d'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+      ]},
+      {
+        key: 'H3i'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
       ]},
       {
         key: 'I1a'
@@ -1101,7 +1652,23 @@ angular
           {value: '1', name: '1 - Yes'},
       ]},
       {
+        key: 'I2g'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+      ]},
+      {
         key: 'I2h'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+      ]},
+      {
+        key: 'I2k'
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
@@ -1157,12 +1724,63 @@ angular
           {value: '1', name: '1 - Occurred within the past seven days'},
       ]},
       {
+        key: 'J2A'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No pain'},
+          {value: '1', name: '1 - Pain less than daily'},
+          {value: '2', name: '2 - Pain daily'}
+      ]},
+      {
+        key: 'J2B'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '1', name: '1 - Mild pain'},
+          {value: '2', name: '2 - Moderate pain'},
+          {value: '3', name: '3 - Times when pain is horrible or excruciating'}
+      ]},
+      {
+        key: 'J4A'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Yes'},
+          {value: '1', name: '1 - No'}
+      ]},
+      {
+        key: 'J4C'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Yes'},
+          {value: '1', name: '1 - No'}
+      ]},
+      {
+        key: 'J4D'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Yes'},
+          {value: '1', name: '1 - No'}
+      ]},
+      {
         key: 'J5c'
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
           {value: '0', name: '0 - Did not occur'},
           {value: '1', name: '1 - Occurred within the past seven days'},
+      ]},
+      {
+        key: 'K3a'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+          {value: '9', name: '9 - Unknown (admission only)'}
       ]},
       {
         key: 'K5a'
@@ -1174,6 +1792,14 @@ angular
       ]},
       {
         key: 'K5b'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+      ]},
+      {
+        key: 'K5h'
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
@@ -1202,6 +1828,30 @@ angular
           {value: '3', name: '3 - 1001 to 1500 cc/day'},
           {value: '4', name: '4 - 1501 to 2000 cc/day'},
           {value: '5', name: '5 -2001 to or more cc/day'}
+      ]},
+      {
+        key: 'L1c'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+      ]},
+      {
+        key: 'L1d'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
+      ]},
+      {
+        key: 'L1e'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
       ]},
       {
         key: 'M1a'
@@ -1277,6 +1927,14 @@ angular
           {value: '2', name: '2 - Stage 2'},
           {value: '3', name: '3 - Stage 3'},
           {value: '4', name: '4 - Stage 4'}
+      ]},
+      {
+        key: 'M3'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'},
       ]},
       {
         key: 'M4b'
@@ -1395,26 +2053,47 @@ angular
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
-          {value: '0', name: '0 - Yes'},
-          {value: '1', name: '1 - No'}
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
       ]},
       {
         key: 'N1b'
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
-          {value: '0', name: '0 - Yes'},
-          {value: '1', name: '1 - No'}
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
       ]},
       {
         key: 'N1c'
         type: 'select'
         titleMap: [
           {value: '', name: '--'},
-          {value: '0', name: '0 - Yes'},
-          {value: '1', name: '1 - No'}
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
+      {
+        key: 'N2'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Most - more than 2/3 of time'},
+          {value: '1', name: '1 - Some - from 1/3 to 2/3 of time'},
+          {value: '2', name: '2 - Little - less than 1/3 of time'},
+          {value: '3', name: '3 - None'}
       ]},
       "O3",
+      "O4b",
+      "O4c",
+      "O4d",
+      {
+        key: 'P1aO'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - No'},
+          {value: '1', name: '1 - Yes'}
+      ]},
       "P1baA",
       "P1baB",
       "P1bbA",
@@ -1432,8 +2111,53 @@ angular
       "P3h",
       "P3i",
       "P3j",
+      {
+        key: 'P4c'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Not used'},
+          {value: '1', name: '1 - Used less than daily'},
+          {value: '2', name: '2 - Used daily'}
+      ]},
+      {
+        key: 'P4d'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Not used'},
+          {value: '1', name: '1 - Used less than daily'},
+          {value: '2', name: '2 - Used daily'}
+      ]},
+      {
+        key: 'P4e'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Not used'},
+          {value: '1', name: '1 - Used less than daily'},
+          {value: '2', name: '2 - Used daily'}
+      ]},
       "P7",
       "P8",
+      {
+        key: 'R3a'
+        type: 'select'
+        titleMap: [
+          {value: '', name: '--'},
+          {value: '0', name: '0 - Ambulatory Health Service'},
+          {value: '1', name: '1 - Inpatient Acute Care Service'},
+          {value: '2', name: '2 - Inpatient Rehabilitation Service (General)'}
+          {value: '3', name: '3 - Inpatient Continuing Care Service'},
+          {value: '4', name: '4 - Residential Care Service (24-hour nursing care)'},
+          {value: '5', name: '5 - Inpatient Psychiatry Service'}
+          {value: '6', name: '6 - Other/Unclassified Service'},
+          {value: '7', name: '7 - Inpatient Rehabilitation Service (Specialized)'},
+          {value: '8', name: '8 - Home Care Service'}
+          {value: '9', name: '9 - Residential Care Service (board and care)'},
+          {value: '10', name: '10 - Private Home (no home care)'},
+          {value: '11', name: '11 - Deceased'}
+      ]},
       "IAR-1"
     ]
     
