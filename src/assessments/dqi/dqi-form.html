@@ -14,6 +14,7 @@
         <button
           type="button"
           ng-csv="dqiCtrl.getAssessmentList"
+          field-separator="|"
           csv-header="dqiCtrl.getHeaders()"
           class="btn btn-primary"
           filename="{{dqiCtrl.filename}}">{{'assessments.export_csv'|translate}}

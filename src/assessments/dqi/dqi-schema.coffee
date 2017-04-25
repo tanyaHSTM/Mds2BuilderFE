@@ -12,12 +12,6 @@ angular
       type: 'object'
       properties:
 
-        Y2:
-          type: 'string'
-          title: '(Y2) Record Type Name'
-          enum: ['CR', 'CI', 'AD', 'UP', 'FA', 'QA', 'MD', 'DC', 'SP']
-          default: 'FA'
-
         Master_no:
           type: 'string'
           title: '(Master_no) Master no. from CCIM'
@@ -1009,20 +1003,6 @@ angular
           validationMessage: "Format must be yyyy"
 
     schemaForm.form = [
-      {
-        key: 'Y2',
-        type: 'select',
-        titleMap: [
-          {value: 'CR', name: 'CR - Control Record'},
-          {value: 'CI', name: 'CI - Contact Information'},
-          {value: 'AD', name: 'AD - Admission/Re-entry'},
-          {value: 'UP', name: 'UP - Update'},
-          {value: 'FA', name: 'FA - RAI MDS 2.0 Full Assessment'},
-          {value: 'QA', name: 'QA - RAI MDS 2.0 Quarterly Assessment'},
-          {value: 'MD', name: 'MD - Medication'},
-          {value: 'DC', name: 'DC - Discharge'},
-          {value: 'SP', name: 'SP - Special Project'}
-        ]},
       "Master_no",
       "Resident_identifier",
       {
