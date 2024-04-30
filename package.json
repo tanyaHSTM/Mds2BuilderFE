@@ -12,7 +12,7 @@
     "bower": "^1.7.7",
     "coffee-script": "1.12.7",
     "del": "3.0.0",
-    "ejs": "2.5.8",
+    "ejs": "3.1.10",
     "event-stream": "3.3.4",
     "express": "4.13.3",
     "gulp": "3.9.1",
