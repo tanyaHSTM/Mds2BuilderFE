@@ -51,7 +51,7 @@
     "postcss": "6.0.14",
     "precss": "2.0.0",
     "q": "1.5.1",
-    "requirejs": "2.3.5",
+    "requirejs": "2.3.7",
     "run-sequence": "2.2.0",
     "vinyl-paths": "2.1.0"
   }
